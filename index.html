@@ -415,7 +415,7 @@
             section {
                 padding: 20px 0 !important;
                 min-height: auto !important;
-                page-break-inside: avoid; /* 盡量避免區塊被切斷在兩頁 */
+                page-break-inside: auto !important; /* 改為 auto，允許長區塊內部正常斷頁，避免互相干擾 */
             }
 
             /* ★強制設定：讓特定區塊在列印/存PDF時，後方必定斷頁，確保各項目獨立成頁★ */
@@ -430,6 +430,8 @@
                 page-break-after: always !important;
                 break-after: page !important;
                 margin-bottom: 0 !important;
+                overflow: visible !important; /* 【重要】解除表格的 overflow 限制，確保強制斷頁語法順利生效 */
+                display: block !important;
             }
             
             /* 強制背景顏色列印 (適用於標題等重要裝飾) */
@@ -631,10 +633,12 @@
                     <div class="speaker-img-wrap"><img src="images/speaker/speaker07.png" alt="林萬" loading="lazy"></div>
                     <div class="speaker-info"><div class="title">監事長</div><div class="name">林 萬</div></div>
                 </div>
+                
                 <div class="speaker-card">
                     <div class="speaker-img-wrap"><img src="images/speaker/speaker08.png" alt="謝金河" loading="lazy"></div>
                     <div class="speaker-info"><div class="title">財信傳媒集團 董事長</div><div class="name">謝金河</div></div>
                 </div>
+
             </div>
         </section>
 
@@ -645,8 +649,8 @@
             <h3 class="fade-in" style="color: var(--accent-navy); margin-bottom: 15px; font-weight: 700; font-size: 20px;">一、桃園市航空城發展協會第六屆組織系統表</h3>
             <!-- 加入 id="org-chart-section" 供列印斷頁使用 -->
             <div id="org-chart-section" class="fade-in" style="margin-bottom: 40px;">
-                <!-- 使用標準相對路徑 images/ -->
-                <img src="images/桃園市航空城發展協會第六屆組織系統表.jpg" alt="桃園市航空城發展協會第六屆組織系統表" style="width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 8px; box-shadow: var(--shadow-md);">
+                <!-- 使用標準相對路徑 images/，將寬度調整為 80% 並置中 -->
+                <img src="images/桃園市航空城發展協會第六屆組織系統表.jpg" alt="桃園市航空城發展協會第六屆組織系統表" style="width: 80%; height: auto; display: block; margin: 0 auto; border-radius: 8px; box-shadow: var(--shadow-md);">
             </div>
 
             <h3 class="fade-in" style="color: var(--accent-navy); margin-bottom: 15px; font-weight: 700; font-size: 20px;">二、航空城五大願景</h3>
@@ -663,100 +667,100 @@
             </div>
             
             <h3 class="fade-in" style="color: var(--accent-navy); margin-bottom: 15px; font-weight: 700; font-size: 20px;">三、工作計劃</h3>
-            <!-- 加入 id="plan-table-section" 供列印斷頁使用 -->
-            <div id="plan-table-section" class="fade-in" style="background: #fff; border-radius: 8px; padding: 20px; border: 1px solid var(--surface-border); overflow-x: auto;">
-                <h3 style="text-align: center; margin-bottom: 20px; color: var(--accent-navy);">桃園市航空城發展協會<br>115工作計畫大綱</h3>
-                <table style="width: 100%; border-collapse: collapse; font-size: 15px; min-width: 600px;">
+            <!-- 加入 id="plan-table-section" 供列印斷頁使用，將寬度調整為 80% 並置中 -->
+            <div id="plan-table-section" class="fade-in" style="background: #fff; border-radius: 8px; padding: 16px; border: 1px solid var(--surface-border); overflow-x: auto; width: 80%; margin: 0 auto; margin-bottom: 40px;">
+                <h3 style="text-align: center; margin-bottom: 16px; font-size: 16px; color: var(--accent-navy);">桃園市航空城發展協會<br>115工作計畫大綱</h3>
+                <table style="width: 100%; border-collapse: collapse; font-size: 12px; min-width: 480px;">
                     <thead>
                         <tr style="background: var(--bg-color);">
-                            <th style="border: 1px solid var(--surface-border); padding: 12px; color: var(--accent-navy);">類別</th>
-                            <th style="border: 1px solid var(--surface-border); padding: 12px; color: var(--accent-navy);">工作項目及實施辦法</th>
-                            <th style="border: 1px solid var(--surface-border); padding: 12px; color: var(--accent-navy);">預定進度</th>
+                            <th style="border: 1px solid var(--surface-border); padding: 10px; color: var(--accent-navy);">類別</th>
+                            <th style="border: 1px solid var(--surface-border); padding: 10px; color: var(--accent-navy);">工作項目及實施辦法</th>
+                            <th style="border: 1px solid var(--surface-border); padding: 10px; color: var(--accent-navy);">預定進度</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td rowspan="3" style="border: 1px solid var(--surface-border); padding: 12px; text-align: center; font-weight: bold; width: 15%;">壹、會議</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;">1. 召開會員大會</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px; width: 25%;">十二月份舉辦</td>
+                            <td rowspan="3" style="border: 1px solid var(--surface-border); padding: 10px; text-align: center; font-weight: bold; width: 15%;">壹、會議</td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;">1. 召開會員大會</td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px; width: 25%;">十二月份舉辦</td>
                         </tr>
                         <tr>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;">2. 理監事聯席會</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;">每月召開一次(併辦職業參訪或例會)</td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;">2. 理監事聯席會</td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;">每月召開一次(併辦職業參訪或例會)</td>
                         </tr>
                         <tr>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;">3. 必要時召開各種臨時會議</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;">視實際需要舉行</td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;">3. 必要時召開各種臨時會議</td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;">視實際需要舉行</td>
                         </tr>
                         <tr>
-                            <td rowspan="4" style="border: 1px solid var(--surface-border); padding: 12px; text-align: center; font-weight: bold;">貳、財務</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;">1. 各項經費收支、登帳、核銷工作</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;">適時辦理</td>
+                            <td rowspan="4" style="border: 1px solid var(--surface-border); padding: 10px; text-align: center; font-weight: bold;">貳、財務</td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;">1. 各項經費收支、登帳、核銷工作</td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;">適時辦理</td>
                         </tr>
                         <tr>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;">2. 編列下年度經費預算</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;">10月份辦理</td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;">2. 編列下年度經費預算</td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;">10月份辦理</td>
                         </tr>
                         <tr>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;">3. 整理上年度經決算報告</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;">1月份辦理</td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;">3. 整理上年度經決算報告</td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;">1月份辦理</td>
                         </tr>
                         <tr>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;">4. 收取會費、採購、出納及管理及其他收入</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;">隨到隨辦</td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;">4. 收取會費、採購、出納及管理及其他收入</td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;">隨到隨辦</td>
                         </tr>
                         <tr>
-                            <td rowspan="13" style="border: 1px solid var(--surface-border); padding: 12px; text-align: center; font-weight: bold;">參、活動</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;">1. 產業拜訪(公關拜訪)</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;">不定期舉辦</td>
+                            <td rowspan="13" style="border: 1px solid var(--surface-border); padding: 10px; text-align: center; font-weight: bold;">參、活動</td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;">1. 產業拜訪(公關拜訪)</td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;">不定期舉辦</td>
                         </tr>
                         <tr>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;">2. 理監事聯席會</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;">每月(併辦職業參訪或例會)</td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;">2. 理監事聯席會</td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;">每月(併辦職業參訪或例會)</td>
                         </tr>
                         <tr>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;">3. 職業參訪</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;">每半年</td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;">3. 職業參訪</td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;">每半年</td>
                         </tr>
                         <tr>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;">4. 全會員例會活動</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;">每三個月</td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;">4. 全會員例會活動</td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;">每三個月</td>
                         </tr>
                         <tr>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;">5. 舉辦會外公關聯誼活動</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;">1.就職典禮</td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;">5. 舉辦會外公關聯誼活動</td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;">1.就職典禮</td>
                         </tr>
                         <tr>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;">6. 參與各項機關社團活動</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;">2.職業參訪</td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;">6. 參與各項機關社團活動</td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;">2.職業參訪</td>
                         </tr>
                         <tr>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;">7. 構築產官學最佳互動平台</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;">3.年度旅遊</td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;">7. 構築產官學最佳互動平台</td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;">3.年度旅遊</td>
                         </tr>
                         <tr>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;">8. 舉辦、協辦各種產業論壇</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;">4.會員大會</td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;">8. 舉辦、協辦各種產業論壇</td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;">4.會員大會</td>
                         </tr>
                         <tr>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;">9. 舉辦金融專業論壇活動協助產業金融業務</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;"></td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;">9. 舉辦金融專業論壇活動協助產業金融業務</td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;"></td>
                         </tr>
                         <tr>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;">10. 舉辦會內聯誼活動</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;"></td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;">10. 舉辦會內聯誼活動</td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;"></td>
                         </tr>
                         <tr>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;">11. 關心會員,參與婚喪喜慶</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;"></td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;">11. 關心會員,參與婚喪喜慶</td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;"></td>
                         </tr>
                         <tr>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;">12. 宣揚本會宗旨與會務吸收新會員</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;"></td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;">12. 宣揚本會宗旨與會務吸收新會員</td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;"></td>
                         </tr>
                         <tr>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;">13. 其他</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 12px;"></td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;">13. 其他</td>
+                            <td style="border: 1px solid var(--surface-border); padding: 10px;"></td>
                         </tr>
                     </tbody>
                 </table>
@@ -906,41 +910,41 @@
         <section id="bylaws">
             <div class="section-title fade-in"><i class="fa-solid fa-scale-balanced"></i> 桃園市航空城發展協會章程</div>
             
-            <div class="fade-in" style="background: #fff; border-radius: 8px; padding: 25px; border: 1px solid var(--surface-border); color: var(--text-main); line-height: 1.8; font-size: 15px;">
-                <h3 style="text-align: center; margin-bottom: 20px; font-size: 20px; color: var(--accent-navy);">桃園市航空城發展協會章程</h3>
+            <div class="fade-in" style="background: #fff; border-radius: 8px; padding: 20px; border: 1px solid var(--surface-border); color: var(--text-main); line-height: 1.8; font-size: 12px;">
+                <h3 style="text-align: center; margin-bottom: 16px; font-size: 16px; color: var(--accent-navy);">桃園市航空城發展協會章程</h3>
                 
-                <h4 style="margin-top: 20px; margin-bottom: 10px; color: var(--accent-navy);">第一章 總則</h4>
-                <p style="margin-bottom: 12px;">第一條 本會名稱為桃園市航空城發展協會(以下簡稱本會。)</p>
-                <p style="margin-bottom: 12px;">第二條 本會以配合中央實施桃園航空城之發展計畫,並促進青埔高鐵特區城市建築美學及工商發展等相關社會公益活動為宗旨,非以營利為目的。</p>
-                <p style="margin-bottom: 12px;">第三條 本會以桃園市行政區域為組織區域。</p>
-                <p style="margin-bottom: 12px;">第四條 本會會址設於主管機關所在地區。</p>
-                <p style="margin-bottom: 12px;">第五條 本會之任務如下：<br>
+                <h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; color: var(--accent-navy);">第一章 總則</h4>
+                <p style="margin-bottom: 10px;">第一條 本會名稱為桃園市航空城發展協會(以下簡稱本會。)</p>
+                <p style="margin-bottom: 10px;">第二條 本會以配合中央實施桃園航空城之發展計畫,並促進青埔高鐵特區城市建築美學及工商發展等相關社會公益活動為宗旨,非以營利為目的。</p>
+                <p style="margin-bottom: 10px;">第三條 本會以桃園市行政區域為組織區域。</p>
+                <p style="margin-bottom: 10px;">第四條 本會會址設於主管機關所在地區。</p>
+                <p style="margin-bottom: 10px;">第五條 本會之任務如下：<br>
                 一、配合中央實施桃園航空城之發展計畫。<br>
                 二、積極協助政府推動桃園航空城、青埔高鐵特區城市建築美學及工商之事宜。<br>
                 三、結合市內之地方仕紳對桃園航空城、青埔高鐵特區城市建築美學及工商提出建言。<br>
                 四、舉辦產、官、學論壇,建言桃園航空城、青埔高鐵特區城市建築美學及工商之方向。<br>
                 五、受理政府機關之委託,擬定政策之發展參考。<br>
                 六、作為政府與民間之溝通平台,以利政策之推動。</p>
-                <p style="margin-bottom: 12px;">第六條 本會之主管機關為桃園市政府。本會之目的事業應受各該事業主管機關之指導、監督。</p>
+                <p style="margin-bottom: 10px;">第六條 本會之主管機關為桃園市政府。本會之目的事業應受各該事業主管機關之指導、監督。</p>
 
-                <h4 style="margin-top: 20px; margin-bottom: 10px; color: var(--accent-navy);">第二章 會員</h4>
-                <p style="margin-bottom: 12px;">第七條 本會會員申請資格如下：<br>
+                <h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; color: var(--accent-navy);">第二章 會員</h4>
+                <p style="margin-bottom: 10px;">第七條 本會會員申請資格如下：<br>
                 一、個人會員:贊同本會宗旨,年滿二十歲,具有中華民國國籍,未受禁治產之宣告或未受有罪行判決,設籍或工作或投資、置產於本市確定者。申請入會為會員。入會費1,000元,常年會費2,000元。<br>
                 二、團體會員:贊同本會宗旨之機構團體並設籍或工作或投資、置產於本市確定者,申請入會為團體會員。每一團體會員得推派代表二至三人,行使會員權利。入會費2,000元,常年會費每一代表2,000元。</p>
-                <p style="margin-bottom: 12px;">第八條 會員(會員代表)有表決權、選舉權、被選舉權、罷免權,每一會員(會員代表)為一權。</p>
-                <p style="margin-bottom: 12px;">第九條 本會會員有遵守本會章程、決議及繳納會費之義務。</p>
-                <p style="margin-bottom: 12px;">第十條 會員(會員代表)有違反法令、本會章程或不遵守會員大會決議時,得經理事會決議,予警告或停權處分,其危害團體情節重大時,得經會員大會決議予以除名。</p>
-                <p style="margin-bottom: 12px;">第十一條 會員有下列情事之一者為出會：<br>
+                <p style="margin-bottom: 10px;">第八條 會員(會員代表)有表決權、選舉權、被選舉權、罷免權,每一會員(會員代表)為一權。</p>
+                <p style="margin-bottom: 10px;">第九條 本會會員有遵守本會章程、決議及繳納會費之義務。</p>
+                <p style="margin-bottom: 10px;">第十條 會員(會員代表)有違反法令、本會章程或不遵守會員大會決議時,得經理事會決議,予警告或停權處分,其危害團體情節重大時,得經會員大會決議予以除名。</p>
+                <p style="margin-bottom: 10px;">第十一條 會員有下列情事之一者為出會：<br>
                 一、喪失會員資格。<br>
                 二、會員連續二年以上未繳會費,經書面通知期限內尚未繳納者。<br>
                 三、經會員大會決議「除名」。</p>
-                <p style="margin-bottom: 12px;">第十二條 會員得以書面敘明理由向本會聲明退會。</p>
-                <p style="margin-bottom: 12px;">第十三條 會員經出會或退會,已繳納或捐贈之各項費用,均不予退還。</p>
+                <p style="margin-bottom: 10px;">第十二條 會員得以書面敘明理由向本會聲明退會。</p>
+                <p style="margin-bottom: 10px;">第十三條 會員經出會或退會,已繳納或捐贈之各項費用,均不予退還。</p>
 
-                <h4 style="margin-top: 20px; margin-bottom: 10px; color: var(--accent-navy);">第三章 組織及職權</h4>
-                <p style="margin-bottom: 12px;">第十四條 本會以「會員大會」為最高權力機構;會員大會閉會期間,由理事會代行職權,監事會為監察機構。</p>
-                <p style="margin-bottom: 12px;">第十五條 會員人數若超過三百人時,按分區比例選出會員代表,再召開「會員代表大會」,行使會員大會職權。會員代表任期二年,其名額及選舉辦法由理事會擬定,報請桃園市政府核備後行之。</p>
-                <p style="margin-bottom: 12px;">第十六條 會員大會之職權如下：<br>
+                <h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; color: var(--accent-navy);">第三章 組織及職權</h4>
+                <p style="margin-bottom: 10px;">第十四條 本會以「會員大會」為最高權力機構;會員大會閉會期間,由理事會代行職權,監事會為監察機構。</p>
+                <p style="margin-bottom: 10px;">第十五條 會員人數若超過三百人時,按分區比例選出會員代表,再召開「會員代表大會」,行使會員大會職權。會員代表任期二年,其名額及選舉辦法由理事會擬定,報請桃園市政府核備後行之。</p>
+                <p style="margin-bottom: 10px;">第十六條 會員大會之職權如下：<br>
                 一、訂定與變更章程。<br>
                 二、選舉及罷免理事、監事。<br>
                 三、議決入會費、常年會費、事業費及會員捐款事宜。<br>
@@ -949,57 +953,57 @@
                 六、議決財產之處分。<br>
                 七、議決本會之解散。<br>
                 八、議決與會員權利義務有關之其他重大事項。</p>
-                <p style="margin-bottom: 12px;">第十七條 本會設理事二十五人,監事七人,由會員(會員大會)選舉之,分別成立理事會、監事會。選舉前項理事、監事時,同時按得票順序得選出候補理事八人、候補監事二人,遇理事、監事出缺時,分別依序遞補之。本屆理事會得提出下屆理事、監事候選人參考名單。理事、監事得採用通訊選舉,但不得連續辦理。通訊辦法由理事會通過,報請桃園市政府核備後行之。</p>
-                <p style="margin-bottom: 12px;">第十八條 理事會之職權如下：<br>
+                <p style="margin-bottom: 10px;">第十七條 本會設理事二十五人,監事七人,由會員(會員大會)選舉之,分別成立理事會、監事會。選舉前項理事、監事時,同時按得票順序得選出候補理事八人、候補監事二人,遇理事、監事出缺時,分別依序遞補之。本屆理事會得提出下屆理事、監事候選人參考名單。理事、監事得採用通訊選舉,但不得連續辦理。通訊辦法由理事會通過,報請桃園市政府核備後行之。</p>
+                <p style="margin-bottom: 10px;">第十八條 理事會之職權如下：<br>
                 一、審定會員(會員代表)之資格。<br>
                 二、選舉或罷免常務理事、理事長。<br>
                 三、決議理事、常務理事、理事長之辭職。<br>
                 四、聘免本會工作人員之審定。<br>
                 五、擬定年度工作計劃、工作報告及預算決算。<br>
                 六、其他有關會務應執行之事項。</p>
-                <p style="margin-bottom: 12px;">第十九條 理事會設常務理事七人,由理事互選之,並由常務理事中選舉一人為理事長(不得連選連任),二人為副理事長,理事長對內綜理督導會務,對外代表本會,並擔任會員大會及理事會主席。理事長因事不能執行職務時,由理事長指定副理事長代理之,理事長、常務理事出缺時,應於一個月內補選之。</p>
-                <p style="margin-bottom: 12px;">第二十條 監事會之職權如下：<br>
+                <p style="margin-bottom: 10px;">第十九條 理事會設常務理事七人,由理事互選之,並由常務理事中選舉一人為理事長(不得連選連任),二人為副理事長,理事長對內綜理督導會務,對外代表本會,並擔任會員大會及理事會主席。理事長因事不能執行職務時,由理事長指定副理事長代理之,理事長、常務理事出缺時,應於一個月內補選之。</p>
+                <p style="margin-bottom: 10px;">第二十條 監事會之職權如下：<br>
                 一、監察理事會工作之執行。<br>
                 二、審核年度決算。<br>
                 三、選舉及罷免常務監事。<br>
                 四、議決監事及常務監事之辭職。<br>
                 五、其他依法應執行監察事項。</p>
-                <p style="margin-bottom: 12px;">第廿一條 監事會設常務監事二人,由監事互選之,並由常務監事中選舉一人為監事長,監察日常會務,並擔任監事會主席。監事長因事不能執行職務時,由常務監事互推一人代理之。監事長出缺時,應於一個月內補選之。</p>
-                <p style="margin-bottom: 12px;">第廿二條 理事、監事均為無給職,任期二年,連選得連任。</p>
-                <p style="margin-bottom: 12px;">第廿三條 監理事有下列情事之一時,應即解任。<br>
+                <p style="margin-bottom: 10px;">第廿一條 監事會設常務監事二人,由監事互選之,並由常務監事中選舉一人為監事長,監察日常會務,並擔任監事會主席。監事長因事不能執行職務時,由常務監事互推一人代理之。監事長出缺時,應於一個月內補選之。</p>
+                <p style="margin-bottom: 10px;">第廿二條 理事、監事均為無給職,任期二年,連選得連任。</p>
+                <p style="margin-bottom: 10px;">第廿三條 監理事有下列情事之一時,應即解任。<br>
                 一、喪失會員(會員代表)資格。<br>
                 二、因故辭職,經理事會或監事會決議通過者。<br>
                 三、被罷免或撤免者。<br>
                 四、受停權處分期間逾任期二分之一者。</p>
-                <p style="margin-bottom: 12px;">第廿四條 本會置秘書長一人,承理事長之命處理本會事務,置財務長一人,承理事長之命處理本會財務,並報請主管機關備查。其他工作人員若干人,由理事長提名理事會通過後聘免之。前項工作人員不得由選任之理事監事擔任。工作人員權責及分層負責事項由理事會另定之。</p>
-                <p style="margin-bottom: 12px;">第廿五條 本會得設各種委員會、小組或其他分支機構等內部作業組織,其組織簡則經理事會通過後行,變更時亦同。</p>
-                <p style="margin-bottom: 12px;">第廿六條 本會得經過理事會通過,聘請名譽理事長、顧問各若干人,其聘期與理事、監事之任期同。</p>
+                <p style="margin-bottom: 10px;">第廿四條 本會置秘書長一人,承理事長之命處理本會事務,置財務長一人,承理事長之命處理本會財務,並報請主管機關備查。其他工作人員若干人,由理事長提名理事會通過後聘免之。前項工作人員不得由選任之理事監事擔任。工作人員權責及分層負責事項由理事會另定之。</p>
+                <p style="margin-bottom: 10px;">第廿五條 本會得設各種委員會、小組或其他分支機構等內部作業組織,其組織簡則經理事會通過後行,變更時亦同。</p>
+                <p style="margin-bottom: 10px;">第廿六條 本會得經過理事會通過,聘請名譽理事長、顧問各若干人,其聘期與理事、監事之任期同。</p>
 
-                <h4 style="margin-top: 20px; margin-bottom: 10px; color: var(--accent-navy);">第四章 會議</h4>
-                <p style="margin-bottom: 12px;">第廿七條 會員大會分定期會議與臨時會議兩種,由理事長召集,召集時,除緊急事故之臨時會議外,應於十五日前以書面通知。定期會議每年召開一次;臨時會議,理事會認為必要,或經會員(會員代表)五分之一以上之請求,或監事會函請召集時召開之。</p>
-                <p style="margin-bottom: 12px;">第廿八條 會員大會不能親自出席大會時,得以書面委託其他會員(會員代表)代理,每一會員(會員代表)以代理一人為限。</p>
-                <p style="margin-bottom: 12px;">第廿九條 會員大會之決議,以會員(會員代表)過半數之出席,出席人數超過半數之同意行之。但下列事項之決議,需出席人數三分之二以上同意。<br>
+                <h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; color: var(--accent-navy);">第四章 會議</h4>
+                <p style="margin-bottom: 10px;">第廿七條 會員大會分定期會議與臨時會議兩種,由理事長召集,召集時,除緊急事故之臨時會議外,應於十五日前以書面通知。定期會議每年召開一次;臨時會議,理事會認為必要,或經會員(會員代表)五分之一以上之請求,或監事會函請召集時召開之。</p>
+                <p style="margin-bottom: 10px;">第廿八條 會員大會不能親自出席大會時,得以書面委託其他會員(會員代表)代理,每一會員(會員代表)以代理一人為限。</p>
+                <p style="margin-bottom: 10px;">第廿九條 會員大會之決議,以會員(會員代表)過半數之出席,出席人數超過半數之同意行之。但下列事項之決議,需出席人數三分之二以上同意。<br>
                 一、章程訂定與變更。<br>
                 二、會員(會員代表)之除名。<br>
                 三、財產之處分。<br>
                 四、本會之解散。<br>
                 五、其他與會員權利、義務有關之重大事項。</p>
-                <p style="margin-bottom: 12px;">第三十條 理事會每三個月召開一次,監事會每三個月召開一次,必要時得召開聯席會議或臨時會議。前項會議召集時除臨時會議外,應於七日以書面通知,會議之決議,各以理事、監事過半數之出席,出席人數較多數之同意行之。</p>
-                <p style="margin-bottom: 12px;">第卅一條 理事應出席理事會議,監事應出席監事會議,不得委託他人出席,理事、監事連續二次無故不出席理事、監事會者視同辭職。</p>
+                <p style="margin-bottom: 10px;">第三十條 理事會每三個月召開一次,監事會每三個月召開一次,必要時得召開聯席會議或臨時會議。前項會議召集時除臨時會議外,應於七日以書面通知,會議之決議,各以理事、監事過半數之出席,出席人數較多數之同意行之。</p>
+                <p style="margin-bottom: 10px;">第卅一條 理事應出席理事會議,監事應出席監事會議,不得委託他人出席,理事、監事連續二次無故不出席理事、監事會者視同辭職。</p>
 
-                <h4 style="margin-top: 20px; margin-bottom: 10px; color: var(--accent-navy);">第五章 經費及會計</h4>
-                <p style="margin-bottom: 12px;">第卅二條 本會之經費來源如下：<br>
+                <h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; color: var(--accent-navy);">第五章 經費及會計</h4>
+                <p style="margin-bottom: 10px;">第卅二條 本會之經費來源如下：<br>
                 一、入會費壹仟元整(1,000元),會費新台幣貳仟元整。(2,000元) 團體會員常年會費每一代表新台幣貳仟元整。<br>
                 二、會員捐款。<br>
                 四、其他收入。</p>
-                <p style="margin-bottom: 12px;">第卅三條 本會會計年度以曆年為準,自每年一月一日起至十二月三十一日止。</p>
-                <p style="margin-bottom: 12px;">第卅四條 本會每年於會計年度開始前兩個月,由理事會編造年度工作計劃、收支預算表、員工待遇表,提會員大會通過(會員大會因故未能如期召開者,先提理、監事聯席會議通過),於會計年度開始前,報主管機關核備。應於會計年度終了後兩個月,由理事會編造年度工作報告、收支決算、現金出納表、資產負債表、財產目錄、及基金收支表,送監事會審核後,造具審核意見書送還理事會,提會員大會通過,於三月底前報請主管機關核備(大會未能如期召開時,應先報主管機關)。</p>
-                <p style="margin-bottom: 12px;">第卅五條 本會於解散後,剩餘財產歸屬所在地之地方自治團體或主管機關指定之機關團體所有。</p>
+                <p style="margin-bottom: 10px;">第卅三條 本會會計年度以曆年為準,自每年一月一日起至十二月三十一日止。</p>
+                <p style="margin-bottom: 10px;">第卅四條 本會每年於會計年度開始前兩個月,由理事會編造年度工作計劃、收支預算表、員工待遇表,提會員大會通過(會員大會因故未能如期召開者,先提理、監事聯席會議通過),於會計年度開始前,報主管機關核備。應於會計年度終了後兩個月,由理事會編造年度工作報告、收支決算、現金出納表、資產負債表、財產目錄、及基金收支表,送監事會審核後,造具審核意見書送還理事會,提會員大會通過,於三月底前報請主管機關核備(大會未能如期召開時,應先報主管機關)。</p>
+                <p style="margin-bottom: 10px;">第卅五條 本會於解散後,剩餘財產歸屬所在地之地方自治團體或主管機關指定之機關團體所有。</p>
 
-                <h4 style="margin-top: 20px; margin-bottom: 10px; color: var(--accent-navy);">第六章 附則</h4>
-                <p style="margin-bottom: 12px;">第卅六條 本章程未規定事項,悉依有關法令規定辦理。</p>
-                <p style="margin-bottom: 12px;">第卅七條 本章程經會員(會員代表)大會通過,報請桃園市政府核備後施行,變更時亦同。</p>
-                <p style="margin-bottom: 12px;">第卅八條 本章程經本會100年7月7日第一屆第一次會員(會員代表)大會通過報經桃園市政府8月1日府社發字第1000304062號函准予備查。<br>
+                <h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; color: var(--accent-navy);">第六章 附則</h4>
+                <p style="margin-bottom: 10px;">第卅六條 本章程未規定事項,悉依有關法令規定辦理。</p>
+                <p style="margin-bottom: 10px;">第卅七條 本章程經會員(會員代表)大會通過,報請桃園市政府核備後施行,變更時亦同。</p>
+                <p style="margin-bottom: 10px;">第卅八條 本章程經本會100年7月7日第一屆第一次會員(會員代表)大會通過報經桃園市政府8月1日府社發字第1000304062號函准予備查。<br>
                 本章程第一次修正於106年08月25日第三屆第一次會員(會員代表)大會通過報經桃園市政府備查。<br>
                 本章程第二次修正於109年12月05日第四屆第一次會員(會員代表)大會通過報經桃園市政府備查。<br>
                 本章程第三次修正於112年12月27日第五屆第一次會員(會員代表)大會通過報經桃園市政府備查。<br>
