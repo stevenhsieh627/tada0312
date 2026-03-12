@@ -378,6 +378,11 @@
             padding-top: 75px; /* 保留導覽列高度，避免點擊選單跳轉時被遮擋 */
             padding-bottom: 15px; /* 縮減底部留白 */
         }
+        
+        /* 特別加大緣起區塊在網頁版底部的留白 */
+        #origin {
+            margin-bottom: 80px;
+        }
 
         /* 新增：縮減組織章程與聯絡我們之間的留白空間 */
         #bylaws { min-height: auto; padding-bottom: 20px; }
@@ -411,6 +416,20 @@
                 padding: 20px 0 !important;
                 min-height: auto !important;
                 page-break-inside: avoid; /* 盡量避免區塊被切斷在兩頁 */
+            }
+
+            /* ★強制設定：讓特定區塊在列印/存PDF時，後方必定斷頁，確保各項目獨立成頁★ */
+            #origin,
+            #org-chart-section,
+            #vision-section,
+            #plan-table-section,
+            #directors-donations,
+            #committee-donations,
+            #gallery,
+            #bylaws {
+                page-break-after: always !important;
+                break-after: page !important;
+                margin-bottom: 0 !important;
             }
             
             /* 強制背景顏色列印 (適用於標題等重要裝飾) */
@@ -624,13 +643,15 @@
             <div class="section-title fade-in"><i class="fa-solid fa-file-lines"></i> 桃園市航空城發展協會115年度工作計畫書</div>
             
             <h3 class="fade-in" style="color: var(--accent-navy); margin-bottom: 15px; font-weight: 700; font-size: 20px;">一、桃園市航空城發展協會第六屆組織系統表</h3>
-            <div class="fade-in" style="margin-bottom: 40px;">
+            <!-- 加入 id="org-chart-section" 供列印斷頁使用 -->
+            <div id="org-chart-section" class="fade-in" style="margin-bottom: 40px;">
                 <!-- 使用標準相對路徑 images/ -->
                 <img src="images/桃園市航空城發展協會第六屆組織系統表.jpg" alt="桃園市航空城發展協會第六屆組織系統表" style="width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 8px; box-shadow: var(--shadow-md);">
             </div>
 
             <h3 class="fade-in" style="color: var(--accent-navy); margin-bottom: 15px; font-weight: 700; font-size: 20px;">二、航空城五大願景</h3>
-            <div class="card fade-in" style="margin-bottom: 40px;">
+            <!-- 加入 id="vision-section" 供列印斷頁使用 -->
+            <div id="vision-section" class="card fade-in" style="margin-bottom: 40px;">
                 <div class="card-header"><div class="card-icon"><i class="fa-solid fa-lightbulb"></i></div><h3 style="margin: 0;">結合資源.展現活力.共創願景</h3></div>
                 <ul>
                     <li>1. 產官學最佳平台</li>
@@ -642,7 +663,8 @@
             </div>
             
             <h3 class="fade-in" style="color: var(--accent-navy); margin-bottom: 15px; font-weight: 700; font-size: 20px;">三、工作計劃</h3>
-            <div class="fade-in" style="background: #fff; border-radius: 8px; padding: 20px; border: 1px solid var(--surface-border); overflow-x: auto;">
+            <!-- 加入 id="plan-table-section" 供列印斷頁使用 -->
+            <div id="plan-table-section" class="fade-in" style="background: #fff; border-radius: 8px; padding: 20px; border: 1px solid var(--surface-border); overflow-x: auto;">
                 <h3 style="text-align: center; margin-bottom: 20px; color: var(--accent-navy);">桃園市航空城發展協會<br>115工作計畫大綱</h3>
                 <table style="width: 100%; border-collapse: collapse; font-size: 15px; min-width: 600px;">
                     <thead>
@@ -744,7 +766,8 @@
         <section id="donations">
             <div class="section-title fade-in"><i class="fa-solid fa-hand-holding-dollar"></i> 贊助捐款芳名錄</div>
             
-            <div class="fade-in" style="background: #fff; border-radius: 8px; padding: 20px; border: 1px solid var(--surface-border); overflow-x: auto; margin-bottom: 20px;">
+            <!-- 加入 id="directors-donations" 供列印斷頁使用 -->
+            <div id="directors-donations" class="fade-in" style="background: #fff; border-radius: 8px; padding: 20px; border: 1px solid var(--surface-border); overflow-x: auto; margin-bottom: 20px;">
                 <h3 style="text-align: center; margin-bottom: 20px; color: var(--accent-navy);">桃園市航空城發展協會理監事年度贊助芳名錄</h3>
                 <table style="width: 100%; border-collapse: collapse; font-size: 15px; min-width: 400px; text-align: center;">
                     <thead>
