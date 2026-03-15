@@ -415,7 +415,7 @@
             section {
                 padding: 20px 0 !important;
                 min-height: auto !important;
-                page-break-inside: auto !important; /* 改為 auto，允許長區塊內部正常斷頁，避免互相干擾 */
+                page-break-inside: avoid; /* 盡量避免區塊被切斷在兩頁 */
             }
 
             /* ★強制設定：讓特定區塊在列印/存PDF時，後方必定斷頁，確保各項目獨立成頁★ */
@@ -430,8 +430,6 @@
                 page-break-after: always !important;
                 break-after: page !important;
                 margin-bottom: 0 !important;
-                overflow: visible !important; /* 【重要】解除表格的 overflow 限制，確保強制斷頁語法順利生效 */
-                display: block !important;
             }
             
             /* 強制背景顏色列印 (適用於標題等重要裝飾) */
@@ -445,21 +443,21 @@
             
             /* 表格列印優化 */
             table {
-                width: 100% !important;
-                page-break-inside: auto; /* 允許表格跨頁 */
-            }
-            tr {
-                page-break-inside: avoid; /* 但避免單一行被切斷 */
-                page-break-after: auto;
-            }
+            /* 表格跨頁時，每頁都會重複顯示表頭 */
             thead {
-                display: table-header-group; /* 表格跨頁時，每頁都會重複顯示表頭 */
+                display: table-header-group; 
             }
             
             /* 圖片列印優化 */
             img {
                 max-width: 100% !important;
                 height: auto !important;
+            }
+
+            /* 修正：鎖定 Logo 在列印時的實體高度，避免因原始圖檔過大而滿版 */
+            .title-logo {
+                height: 45px !important;
+                width: auto !important;
             }
 
             /* 避免連結在列印時被標示為藍色帶底線 */
@@ -480,8 +478,8 @@
             <div class="cover-content fade-in">
                 <h1 class="cover-title-group">
                     <div class="title-top-section">
-                        <!-- 使用標準相對路徑 images/ -->
-                        <img src="images/logo.png" alt="TADA Logo" class="title-logo" width="160" height="32">
+                        <!-- 使用標準相對路徑 ./images/ 確保抓取正確 -->
+                        <img src="./images/logo.png" alt="TADA Logo" class="title-logo" width="160" height="32">
                         <div class="title-text-section"><div class="main-org">桃園市航空城發展協會</div><div class="cover-en-title">Taoyuan Aerotropolis Development Association</div></div>
                     </div>
                     <div class="sub-org">第六屆理事長暨理監事委員會</div>
@@ -542,7 +540,7 @@
             <div class="section-title fade-in"><i class="fa-solid fa-plane-departure"></i> 就職典禮程序表</div>
             <div class="timeline fade-in">
                 <div class="timeline-item">
-                    <div class="time"><i class="fa-regular fa-clock"></i> 17:30 ~ 18:00</div>
+                    <div class="time"><i class="fa-regular fa-clock"></i> 17:00 ~ 18:00</div>
                     <div class="event-name">貴賓報到聯誼</div>
                     <div class="event-desc">迎賓交流</div>
                 </div>
@@ -649,8 +647,8 @@
             <h3 class="fade-in" style="color: var(--accent-navy); margin-bottom: 15px; font-weight: 700; font-size: 20px;">一、桃園市航空城發展協會第六屆組織系統表</h3>
             <!-- 加入 id="org-chart-section" 供列印斷頁使用 -->
             <div id="org-chart-section" class="fade-in" style="margin-bottom: 40px;">
-                <!-- 使用標準相對路徑 images/，將寬度調整為 80% 並置中 -->
-                <img src="images/桃園市航空城發展協會第六屆組織系統表.jpg" alt="桃園市航空城發展協會第六屆組織系統表" style="width: 80%; height: auto; display: block; margin: 0 auto; border-radius: 8px; box-shadow: var(--shadow-md);">
+                <!-- 使用標準相對路徑 images/ -->
+                <img src="images/桃園市航空城發展協會第六屆組織系統表.jpg" alt="桃園市航空城發展協會第六屆組織系統表" style="width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 8px; box-shadow: var(--shadow-md);">
             </div>
 
             <h3 class="fade-in" style="color: var(--accent-navy); margin-bottom: 15px; font-weight: 700; font-size: 20px;">二、航空城五大願景</h3>
@@ -667,8 +665,8 @@
             </div>
             
             <h3 class="fade-in" style="color: var(--accent-navy); margin-bottom: 15px; font-weight: 700; font-size: 20px;">三、工作計劃</h3>
-            <!-- 加入 id="plan-table-section" 供列印斷頁使用，將寬度調整為 80% 並置中 -->
-            <div id="plan-table-section" class="fade-in" style="background: #fff; border-radius: 8px; padding: 16px; border: 1px solid var(--surface-border); overflow-x: auto; width: 80%; margin: 0 auto; margin-bottom: 40px;">
+            <!-- 加入 id="plan-table-section" 供列印斷頁使用 -->
+            <div id="plan-table-section" class="fade-in" style="background: #fff; border-radius: 8px; padding: 16px; border: 1px solid var(--surface-border); overflow-x: auto;">
                 <h3 style="text-align: center; margin-bottom: 16px; font-size: 16px; color: var(--accent-navy);">桃園市航空城發展協會<br>115工作計畫大綱</h3>
                 <table style="width: 100%; border-collapse: collapse; font-size: 12px; min-width: 480px;">
                     <thead>
@@ -1017,6 +1015,35 @@
                 <h2 class="fade-in back-title-sm">攜手共創</h2>
                 <h2 class="fade-in back-title-md">桃園航空城新未來</h2>
                 <h2 class="fade-in back-title-lg">NEXT GEN</h2>
+                
+                <!-- 新增：財信傳媒集團 董事長 Key Takeaways 區塊 -->
+                <div class="fade-in" style="margin-top: 30px; text-align: left; max-width: 600px; margin-left: auto; margin-right: auto; width: 100%;">
+                    <div style="font-size: 16px; font-weight: 700; margin-bottom: 2px;">財信傳媒集團 董事長</div>
+                    <div style="font-size: 14px; color: var(--text-muted); margin-bottom: 15px; font-family: 'Poppins', sans-serif;">CHAIRMAN OF WEALTH MAGAZINE</div>
+                    
+                    <div style="font-size: 18px; font-weight: 700; color: var(--accent-navy); margin-bottom: 15px;">
+                        <i class="fa-solid fa-quote-left" style="color: var(--accent-yellow); margin-right: 8px;"></i>金句金句金句金句金句
+                    </div>
+                    
+                    <div style="font-size: 18px; font-weight: 700; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+                        <i class="fa-solid fa-bolt" style="color: var(--text-main);"></i> Key Takeaways
+                    </div>
+                    
+                    <ul style="list-style: none; padding-left: 0; line-height: 1.8;">
+                        <li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;">
+                            <span style="color: var(--text-main); font-size: 10px; margin-top: 6px;">●</span>
+                            <div><strong>重點項目一：</strong>1.金句金句金句金句金句。</div>
+                        </li>
+                        <li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;">
+                            <span style="color: var(--text-main); font-size: 10px; margin-top: 6px;">●</span>
+                            <div><strong>重點項目二：</strong>2.金句金句金句金句金句。</div>
+                        </li>
+                        <li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;">
+                            <span style="color: var(--text-main); font-size: 10px; margin-top: 6px;">●</span>
+                            <div><strong>重點項目三：</strong>3.金句金句金句金句金句。</div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
 
