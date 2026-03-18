@@ -21,7 +21,7 @@
     <meta property="og:title" content="桃園市航空城發展協會 第六屆就職典禮">
     <meta property="og:description" content="桃園市航空城發展協會 (Taoyuan Aerotropolis Development Association) 第六屆理事長暨理監事就職典禮。跨域整合 · 築夢航空｜2026.03.22">
     <!-- 替換為您目前的 GitHub Pages 絕對路徑 -->
-    <meta property="og:image" content="https://kunfol627.github.io/TADAPDAF2026/images/TADA2026.jpg"> 
+    <meta property="og:image" content="https://kunfol627.github.io/TADAPDAF2026/images/tadanew.jpg"> 
     <meta property="og:image:alt" content="桃園市航空城發展協會 第六屆就職典禮主視覺">
     <meta property="og:url" content="https://kunfol627.github.io/TADAPDAF2026/">
 
@@ -29,7 +29,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="桃園市航空城發展協會 第六屆就職典禮">
     <meta name="twitter:description" content="桃園市航空城發展協會 (Taoyuan Aerotropolis Development Association) 第六屆理事長暨理監事就職典禮。跨域整合 · 築夢航空｜2026.03.22">
-    <meta name="twitter:image" content="https://kunfol627.github.io/TADAPDAF2026/images/TADA2026.jpg">
+    <meta name="twitter:image" content="https://kunfol627.github.io/TADAPDAF2026/images/tadanew.jpg">
 
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -132,18 +132,19 @@
            ========================================= */
         #cover, #back-cover {
             background-color: #f1f5f9; /* Fallback */
-            background-size: cover; background-position: center;
+            background-image: url('images/tadanew.jpg'); /* 加入新的背景圖 */
+            background-size: cover; background-position: center bottom; /* 讓城市剪影貼齊底部 */
             padding: 0; justify-content: center; /* 為了垂直置中 */
             overflow-x: hidden;
         }
 
         .cover-overlay {
-            background: linear-gradient(to bottom, rgba(255,255,255,0.85) 0%, rgba(244,247,249,1) 100%);
+            background: linear-gradient(to bottom, rgba(255,255,255,0.70) 0%, rgba(244,247,249,0.85) 100%);
             position: absolute; inset: 0; z-index: 1;
         }
 
         .back-cover-overlay {
-            background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.85) 100%);
+            background: linear-gradient(0deg, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.70) 100%);
             position: absolute; inset: 0; z-index: 1;
         }
 
@@ -1012,38 +1013,9 @@
         <section id="back-cover">
             <div class="back-cover-overlay"></div>
             <div class="back-content">
-                <h2 class="fade-in back-title-sm">攜手共創</h2>
-                <h2 class="fade-in back-title-md">桃園航空城新未來</h2>
-                <h2 class="fade-in back-title-lg">NEXT GEN</h2>
-                
-                <!-- 新增：財信傳媒集團 董事長 Key Takeaways 區塊 -->
-                <div class="fade-in" style="margin-top: 30px; text-align: left; max-width: 600px; margin-left: auto; margin-right: auto; width: 100%;">
-                    <div style="font-size: 16px; font-weight: 700; margin-bottom: 2px;">財信傳媒集團 董事長</div>
-                    <div style="font-size: 14px; color: var(--text-muted); margin-bottom: 15px; font-family: 'Poppins', sans-serif;">CHAIRMAN OF WEALTH MAGAZINE</div>
-                    
-                    <div style="font-size: 18px; font-weight: 700; color: var(--accent-navy); margin-bottom: 15px;">
-                        <i class="fa-solid fa-quote-left" style="color: var(--accent-yellow); margin-right: 8px;"></i>金句金句金句金句金句
-                    </div>
-                    
-                    <div style="font-size: 18px; font-weight: 700; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
-                        <i class="fa-solid fa-bolt" style="color: var(--text-main);"></i> Key Takeaways
-                    </div>
-                    
-                    <ul style="list-style: none; padding-left: 0; line-height: 1.8;">
-                        <li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;">
-                            <span style="color: var(--text-main); font-size: 10px; margin-top: 6px;">●</span>
-                            <div><strong>重點項目一：</strong>1.金句金句金句金句金句。</div>
-                        </li>
-                        <li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;">
-                            <span style="color: var(--text-main); font-size: 10px; margin-top: 6px;">●</span>
-                            <div><strong>重點項目二：</strong>2.金句金句金句金句金句。</div>
-                        </li>
-                        <li style="margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px;">
-                            <span style="color: var(--text-main); font-size: 10px; margin-top: 6px;">●</span>
-                            <div><strong>重點項目三：</strong>3.金句金句金句金句金句。</div>
-                        </li>
-                    </ul>
-                </div>
+                <h2 class="fade-in back-title-sm" style="color: var(--accent-navy);">攜手共創</h2>
+                <h2 class="fade-in back-title-md" style="color: var(--accent-navy);">桃園航空城新未來</h2>
+                <h2 class="fade-in back-title-lg" style="color: #009FE3;">NEXT GEN</h2>
             </div>
         </section>
 
