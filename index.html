@@ -59,11 +59,31 @@
 
         .a4-page.full-bleed { padding: 0; }
 
-        @page { size: A4; margin: 0; }
+        @page { 
+            size: A4 portrait; 
+            margin: 0; 
+        }
 
         @media print {
-            body { background-color: #FFFFFF; padding: 0; gap: 0; display: block; }
-            .a4-page { box-shadow: none; border: none; margin: 0; }
+            body { 
+                background-color: #FFFFFF; 
+                padding: 0; 
+                margin: 0;
+                gap: 0; 
+                display: block; 
+            }
+            .a4-page { 
+                box-shadow: none; 
+                border: none; 
+                margin: 0 auto; 
+                width: 210mm;
+                height: 296.5mm; /* 稍微縮減高度，徹底消除多餘空白頁的問題 */
+                page-break-after: always; 
+                page-break-inside: avoid;
+                transform: scale(0.9); /* 整體縮小至 90% 確保不超出印表機邊界 */
+                transform-origin: top center; /* 縮放基準點對齊上方中央 */
+                overflow: hidden;
+            }
         }
 
         /* =========================================
