@@ -77,12 +77,16 @@
                 border: none; 
                 margin: 0 auto; 
                 width: 210mm;
-                height: 296.5mm; /* 稍微縮減高度，徹底消除多餘空白頁的問題 */
+                height: 296mm; /* 稍微縮減高度，徹底消除多餘空白頁的問題 */
                 page-break-after: always; 
                 page-break-inside: avoid;
-                transform: scale(0.9); /* 整體縮小至 90% 確保不超出印表機邊界 */
+                transform: scale(0.85); /* 整體縮小至 85% 確保不超出印表機邊界 */
                 transform-origin: top center; /* 縮放基準點對齊上方中央 */
                 overflow: hidden;
+            }
+            /* 避免最後一頁後方多出一張空白頁 */
+            .a4-page:last-child {
+                page-break-after: auto; 
             }
         }
 
