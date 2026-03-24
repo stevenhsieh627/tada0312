@@ -2,1042 +2,1335 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>跨域整合 · 築夢航空 | 桃園市航空城發展協會</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跨域整合 · 築夢航空 | 桃園市航空城發展協會 - 典禮特刊</title>
 
-    <!-- 加入網站 Favicon (頁籤縮圖) - 標準相對路徑 -->
-    <link rel="icon" href="images/logo.png" type="image/png">
-    <link rel="apple-touch-icon" href="images/logo.png">
-
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="桃園市航空城發展協會 (Taoyuan Aerotropolis Development Association) 第六屆理事長暨理監事就職典禮。跨域整合 · 築夢航空｜2026.03.22">
-    <meta name="keywords" content="桃園市,中壢,青埔,大園,航空城,航空城計畫,航廈,機場,都市計畫,都更,危老,桃園市航空城發展協會">
-    <meta name="author" content="桃園市航空城發展協會">
-    
-    <!-- Open Graph (OG) Tags 完整設定 -->
-    <meta property="og:locale" content="zh_TW">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="跨域整合 · 築夢航空 | 桃園市航空城發展協會">
-    <meta property="og:title" content="桃園市航空城發展協會 第六屆就職典禮">
-    <meta property="og:description" content="桃園市航空城發展協會 (Taoyuan Aerotropolis Development Association) 第六屆理事長暨理監事就職典禮。跨域整合 · 築夢航空｜2026.03.22">
-    <!-- 替換為您目前的 GitHub Pages 絕對路徑 -->
-    <meta property="og:image" content="https://kunfol627.github.io/TADAPDAF2026/images/tadanew.jpg"> 
-    <meta property="og:image:alt" content="桃園市航空城發展協會 第六屆就職典禮主視覺">
-    <meta property="og:url" content="https://kunfol627.github.io/TADAPDAF2026/">
-
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="桃園市航空城發展協會 第六屆就職典禮">
-    <meta name="twitter:description" content="桃園市航空城發展協會 (Taoyuan Aerotropolis Development Association) 第六屆理事長暨理監事就職典禮。跨域整合 · 築夢航空｜2026.03.22">
-    <meta name="twitter:image" content="https://kunfol627.github.io/TADAPDAF2026/images/tadanew.jpg">
-
-    <!-- Fonts & Icons -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@500;700;900&family=Poppins:wght@400;500;600;700;800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@500;700;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
         /* =========================================
-           1. CSS 變數與全域設定 (Global Variables)
+           1. 刊物全域與列印設定 (Print & Global)
            ========================================= */
         :root {
-            --bg-color: #F4F7F9;
-            --surface: #FFFFFF;
-            --surface-border: #E2E8F0;
             --text-main: #0F172A;
-            --text-muted: #64748B;
+            --text-muted: #475569;
             --accent-blue: #0284C7;
             --accent-navy: #1E3A8A;
             --accent-yellow: #F59E0B;
-            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
-            
-            /* 新增：側邊面板權威專用色系 */
-            --panel-bg: #1A2B3C;      /* 深海藍 */
-            --panel-surface: #2D2D2D; /* 炭灰 */
-            --panel-gold: #D4AF37;    /* 香檳金 */
-            --panel-silver: #E2E8F0;  /* 銀灰 */
+            --surface-border: #E2E8F0;
+            --bg-gray: #F8FAFC;
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            background-color: var(--bg-color);
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
         }
 
         body {
             font-family: 'Noto Sans TC', sans-serif;
             color: var(--text-main);
-            line-height: 1.6;
-            overflow-x: hidden;
-            background-color: var(--bg-color);
-            background-image: radial-gradient(#CBD5E1 1px, transparent 1px);
-            background-size: 40px 40px;
+            background-color: #525659;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
+            gap: 20px;
         }
 
-        #main-wrapper {
-            transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.4s ease;
-            transform-origin: center center;
-            will-change: transform;
-            min-height: 100vh;
-            overflow-x: hidden; 
-        }
-
-        /* 工具類別 (Utility Classes) */
-        .poppins-font { font-family: 'Poppins', sans-serif; font-weight: 500; }
-        .text-center { text-align: center; }
-        .section-note { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; }
-
-        /* 背景顏色工具 */
-        .bg-navy { background-color: var(--accent-navy); }
-        .bg-blue { background-color: var(--accent-blue); }
-        .bg-cyan { background-color: #38BDF8; }
-        .bg-yellow { background-color: var(--accent-yellow); }
-
-        /* =========================================
-           3. 共用區塊與標題 (Sections & Headings)
-           ========================================= */
-        section {
-            padding: 90px 20px 40px; min-height: 100vh; display: flex;
-            flex-direction: column; justify-content: center; position: relative;
-        }
-
-        .section-title {
-            background-color: var(--accent-navy); color: #FFFFFF;
-            padding: 12px 20px; border-radius: 8px; display: inline-flex;
-            align-items: center; gap: 12px; font-size: 20px; font-weight: 700;
-            box-shadow: var(--shadow-md); letter-spacing: 1px;
-            margin-bottom: 35px; align-self: flex-start;
-        }
-        
-        .section-title i { color: var(--accent-yellow); font-size: 22px; }
-
-        /* 漸顯動畫 */
-        .fade-in {
-            opacity: 0; transform: translateY(20px);
-            transition: opacity 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
-        }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
-
-        /* =========================================
-           4. 首頁與末頁背景 (Cover & Back Cover)
-           ========================================= */
-        #cover, #back-cover {
-            background-color: #f1f5f9; /* Fallback */
-            background-image: url('images/tadanew.jpg'); /* 加入新的背景圖 */
-            background-size: cover; background-position: center bottom; /* 讓城市剪影貼齊底部 */
-            padding: 0; justify-content: center; /* 為了垂直置中 */
-            overflow-x: hidden;
-        }
-
-        .cover-overlay {
-            background: linear-gradient(to bottom, rgba(255,255,255,0.70) 0%, rgba(244,247,249,0.85) 100%);
-            position: absolute; inset: 0; z-index: 1;
-        }
-
-        .back-cover-overlay {
-            background: linear-gradient(0deg, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.70) 100%);
-            position: absolute; inset: 0; z-index: 1;
-        }
-
-        .cover-content, .back-content {
-            position: relative; z-index: 3; padding: 100px 25px 40px;
-            flex-grow: 1; display: flex; flex-direction: column; justify-content: center;
-        }
-
-        .cover-content { text-align: center; }
-        .back-content { align-items: center; width: 100%; }
-
-        .cover-title-group { display: flex; flex-direction: column; align-items: center; margin-bottom: 20px; width: 100%; }
-
-        .title-top-section {
-            display: flex; align-items: center; justify-content: center;
-            gap: clamp(10px, 3vw, 18px); margin-bottom: 15px; flex-wrap: nowrap;
-        }
-
-        .title-text-section { display: flex; flex-direction: column; align-items: center; }
-        .title-logo { height: clamp(40px, 10vw, 56px); width: auto; display: block; }
-
-        .main-org {
-            font-size: clamp(20px, 5.5vw, 30px); font-weight: 900; line-height: 1.2;
-            color: var(--text-main); letter-spacing: 1px; white-space: nowrap;
-        }
-
-        .cover-en-title {
-            font-family: 'Poppins', sans-serif; font-size: clamp(8px, 2vw, 10px);
-            color: var(--accent-blue); letter-spacing: 0.2px; margin: 4px 0 0 0;
-            font-weight: 500; line-height: 1.2; white-space: nowrap; 
-        }
-
-        .sub-org {
-            font-size: clamp(18px, 4.5vw, 24px); font-weight: 700; line-height: 1.3;
-            color: var(--text-main); margin-bottom: 6px; white-space: nowrap;
-        }
-
-        .main-event {
-            color: var(--accent-navy); font-size: clamp(32px, 8vw, 40px);
-            font-weight: 900; letter-spacing: clamp(2px, 1vw, 4px); display: block; white-space: nowrap;
-        }
-
-        .cover-theme {
-            font-family: 'Poppins', 'Noto Sans TC', sans-serif; font-size: 16px;
-            color: var(--accent-navy); letter-spacing: 4px; margin-bottom: 30px;
-            background: #FFFFFF; padding: 12px; border-radius: 8px;
-            border: 1px solid var(--surface-border); box-shadow: var(--shadow-sm); font-weight: 700;
-        }
-
-        .cover-date { color: var(--accent-blue); font-size: 14px; }
-
-        .back-title-sm { font-size: 22px; color: var(--accent-navy); margin-bottom: 5px; letter-spacing: 4px; }
-        .back-title-md { font-size: 32px; color: var(--accent-navy); font-weight: 900; margin-bottom: 5px; letter-spacing: 1px; }
-        .back-title-lg { font-size: 38px; color: var(--accent-blue); font-weight: 900; margin-bottom: 20px; font-family: 'Poppins', sans-serif; letter-spacing: 2px; }
-
-        /* =========================================
-           5. 時間軸 (Timeline / Agenda)
-           ========================================= */
-        .timeline { position: relative; padding-left: 35px; }
-        .timeline::before {
-            content: ''; position: absolute; left: 9px; top: 0; bottom: 0;
-            width: 2px; background: var(--surface-border);
-        }
-        .timeline-item {
-            position: relative; margin-bottom: 30px; background: var(--surface);
-            border: 1px solid var(--surface-border); padding: 18px 20px;
-            border-radius: 12px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;
-        }
-        .timeline-item::before {
-            content: ''; position: absolute; left: -32px; top: 24px;
-            width: 12px; height: 12px; border-radius: 50%; background: var(--accent-blue);
-            border: 3px solid #FFF; box-shadow: 0 0 0 1px var(--surface-border); z-index: 1;
-        }
-        .time {
-            font-family: 'Poppins', sans-serif; color: var(--accent-blue);
-            font-weight: 700; font-size: 16px; margin-bottom: 8px;
-            letter-spacing: 1px; display: flex; align-items: center; gap: 8px;
-        }
-        .time i { font-size: 14px; color: var(--text-muted); }
-        .event-name { font-size: 18px; font-weight: 700; color: var(--text-main); }
-        .event-desc {
-            font-size: 14px; color: var(--text-muted); margin-top: 8px;
-            background: var(--bg-color); padding: 8px 12px; border-radius: 6px;
-        }
-
-        /* 講者名單獨立行距設定，避免手機誤觸 */
-        .speaker-list-item {
-            margin-bottom: 14px;
-            line-height: 1.8;
-            display: block;
-        }
-
-        /* =========================================
-           6. 卡片設計 (Cards for Plan & Directors)
-           ========================================= */
-        .card {
-            background: var(--surface); border: 1px solid var(--surface-border);
-            border-radius: 16px; padding: 25px 20px; margin-bottom: 20px;
-            box-shadow: var(--shadow-md); position: relative; overflow: hidden;
-        }
-        .card::before { content: ''; position: absolute; top: 0; left: 0; width: 5px; height: 100%; background: var(--accent-navy); }
-        .card-header { display: flex; align-items: center; margin-bottom: 15px; }
-        .card-icon {
-            width: 45px; height: 45px; border-radius: 10px; background: var(--bg-color);
-            color: var(--accent-navy); display: flex; justify-content: center; align-items: center;
-            font-size: 20px; margin-right: 15px; border: 1px solid var(--surface-border);
-        }
-        .card h3 { font-size: 18px; color: var(--text-main); font-weight: 700; }
-        .card ul { list-style: none; padding-left: 0; }
-        .card li {
-            position: relative; padding-left: 22px; margin-bottom: 12px; font-size: 15px;
-            color: var(--text-muted); line-height: 1.5;
-        }
-        .card li::before {
-            content: '\f0da'; font-family: 'Font Awesome 6 Free'; font-weight: 900;
-            position: absolute; left: 0; color: var(--accent-blue); font-size: 14px; top: 2px;
-        }
-        #directors strong { color: var(--accent-navy); }
-        .name-wrap { display: inline-block; white-space: nowrap; }
-
-        /* =========================================
-           9. 圖片庫 (Gallery - 滿版圖文)
-           ========================================= */
-        /* 新增：照片網格排版 (Grid Layout) */
-        .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 16px;
-            margin-bottom: 40px;
-        }
-        
-        .gallery-item {
-            border-radius: 12px;
-            overflow: hidden;
+        .a4-page {
+            width: 210mm;
+            height: 297mm; 
+            background-color: #FFFFFF;
             position: relative;
-            border: 1px solid var(--surface-border);
-            box-shadow: var(--shadow-md);
-            background: #FFF;
-            aspect-ratio: 3 / 2; /* 統一照片比例為 3:2 */
-            margin-bottom: 0; /* 移除原本的底部間距，改由 Grid 的 gap 控制 */
-        }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* 讓照片自動填滿方框並裁切邊緣，保持整齊 */
-            display: block;
-            transition: transform 0.4s ease; /* 滑鼠懸停的過渡動畫 */
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.05); /* 滑鼠懸停時微微放大 */
-        }
-        
-        /* 隱藏下方說明文字的樣式 */
-        .gallery-caption {
-            display: none; 
-        }
-
-        /* 自訂 Toast 提示浮窗 */
-        #toast-container {
-            position: fixed; top: 20px; right: 20px; z-index: 9999; display: flex;
-            flex-direction: column; gap: 10px; pointer-events: none;
-        }
-        .toast {
-            background: var(--accent-navy); color: white; padding: 12px 20px; border-radius: 8px;
-            box-shadow: var(--shadow-lg); font-size: 14px; transform: translateX(120%);
-            transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1); display: flex; align-items: center; gap: 10px;
-        }
-        .toast.show { transform: translateX(0); }
-        .toast.error { background: #EF4444; }
-
-        /* 演講嘉賓照片列 */
-        .speaker-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-        @media (min-width: 768px) {
-            .speaker-grid { grid-template-columns: repeat(3, 1fr); }
-        }
-        @media (min-width: 1024px) {
-            .speaker-grid { grid-template-columns: repeat(4, 1fr); }
-        }
-        .speaker-card {
-            background: #FFF;
-            border: 1px solid var(--surface-border);
-            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             overflow: hidden;
-            box-shadow: var(--shadow-sm);
+            page-break-after: always;
+            padding: 20mm; 
             display: flex;
             flex-direction: column;
         }
-        .speaker-img-wrap {
-            background-color: #8C949D; /* 配合原本去背PNG的質感灰底色 */
-            width: 100%;
-            padding-top: 100%; /* 1:1 等比例高度 */
-            position: relative;
-        }
-        .speaker-img-wrap img {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            object-fit: contain;
-            object-position: center bottom;
-        }
-        .speaker-info {
-            padding: 12px 10px;
-            text-align: center;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        /* 姓名與職稱順序調換的 CSS 調整 */
-        .speaker-info .title {
-            font-size: 12px;
-            color: var(--text-muted);
-            line-height: 1.4;
-            margin-bottom: 4px; /* 將原本在 name 的 margin 移至 title 下方 */
-        }
-        .speaker-info .name {
-            font-size: 16px;
-            font-weight: 700;
-            color: var(--accent-navy);
-            letter-spacing: 1px;
-        }
 
-        /* 新增：針對使用者要求的各大區塊縮減間隔（解除 100vh 限制並微調內距） */
-        #toc, #origin, #agenda, #speakers, #annual-plan, #donations, #gallery {
-            min-height: auto;
-            padding-top: 75px; /* 保留導覽列高度，避免點擊選單跳轉時被遮擋 */
-            padding-bottom: 15px; /* 縮減底部留白 */
-        }
-        
-        /* 特別加大緣起區塊在網頁版底部的留白 */
-        #origin {
-            margin-bottom: 80px;
-        }
+        .a4-page.full-bleed { padding: 0; }
 
-        /* 新增：縮減組織章程與聯絡我們之間的留白空間 */
-        #bylaws { min-height: auto; padding-bottom: 20px; }
+        @page { size: A4; margin: 0; }
 
-        /* =========================================
-           列印專用樣式 (@media print)
-           ========================================= */
         @media print {
-            /* 隱藏不必要的 UI 元素 */
-            header, #toast-container, .menu-btn, .fullscreen-menu {
-                display: none !important;
-            }
-
-            /* 重置網頁背景與顏色以節省墨水 */
-            body, #main-wrapper, section, .card, .fade-in, table, th, td {
-                background: #FFF !important;
-                color: #000 !important;
-                box-shadow: none !important;
-                border-color: #CCC !important; /* 讓邊框顏色在列印時較淡較順眼 */
-            }
-
-            /* 取消所有的動畫與位移，確保列印時元素都在正確位置 */
-            .fade-in {
-                opacity: 1 !important;
-                transform: none !important;
-                transition: none !important;
-            }
-
-            /* 針對區塊的列印排版優化 */
-            section {
-                padding: 20px 0 !important;
-                min-height: auto !important;
-                page-break-inside: avoid; /* 盡量避免區塊被切斷在兩頁 */
-            }
-
-            /* ★強制設定：讓特定區塊在列印/存PDF時，後方必定斷頁，確保各項目獨立成頁★ */
-            #origin,
-            #org-chart-section,
-            #vision-section,
-            #plan-table-section,
-            #directors-donations,
-            #committee-donations,
-            #gallery,
-            #bylaws {
-                page-break-after: always !important;
-                break-after: page !important;
-                margin-bottom: 0 !important;
-            }
-            
-            /* 強制背景顏色列印 (適用於標題等重要裝飾) */
-            .section-title {
-                background-color: #1E3A8A !important;
-                color: #FFF !important;
-                -webkit-print-color-adjust: exact; /* Chrome/Safari 強制列印背景色 */
-                print-color-adjust: exact;
-                page-break-after: avoid; /* 避免標題後直接換頁 */
-            }
-            
-            /* 表格列印優化 */
-            table {
-            /* 表格跨頁時，每頁都會重複顯示表頭 */
-            thead {
-                display: table-header-group; 
-            }
-            
-            /* 圖片列印優化 */
-            img {
-                max-width: 100% !important;
-                height: auto !important;
-            }
-
-            /* 修正：鎖定 Logo 在列印時的實體高度，避免因原始圖檔過大而滿版 */
-            .title-logo {
-                height: 45px !important;
-                width: auto !important;
-            }
-
-            /* 避免連結在列印時被標示為藍色帶底線 */
-            a {
-                text-decoration: none !important;
-                color: #000 !important;
-            }
+            body { background-color: #FFFFFF; padding: 0; gap: 0; display: block; }
+            .a4-page { box-shadow: none; border: none; margin: 0; }
         }
+
+        /* =========================================
+           2. 刊物排版元件 (Typography & Layout)
+           ========================================= */
+        h1, h2, h3, h4 { font-family: 'Noto Serif TC', serif; font-weight: 900; color: var(--accent-navy); }
+        
+        .page-header {
+            border-bottom: 2px solid var(--accent-navy);
+            padding-bottom: 5mm;
+            margin-bottom: 8mm;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+
+        .page-title { font-size: 22pt; letter-spacing: 2px; display: flex; align-items: center; gap: 10px; }
+        .page-title i { color: var(--accent-yellow); font-size: 18pt; }
+        .page-subtitle { font-family: 'Poppins', sans-serif; font-size: 10pt; color: var(--accent-blue); letter-spacing: 1px; font-weight: 600; }
+
+        .content-box {
+            background: var(--bg-gray);
+            border: 1px solid var(--surface-border);
+            border-radius: 8px;
+            padding: 8mm;
+            margin-bottom: 6mm;
+        }
+
+        .content-box h3 { font-size: 16pt; margin-bottom: 4mm; display: flex; align-items: center; gap: 8px; }
+        .content-box h3 i { color: var(--accent-blue); }
+        .content-box p { font-size: 11pt; line-height: 1.8; color: var(--text-muted); text-align: justify; }
+
+        .grid-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; }
+
+        ul.styled-list { list-style: none; }
+        ul.styled-list li { position: relative; padding-left: 15px; margin-bottom: 6px; font-size: 11pt; line-height: 1.6; }
+        ul.styled-list li::before { content: '\f0da'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; left: 0; color: var(--accent-blue); }
+
+        /* =========================================
+           3. 封面與封底 (Cover & Back)
+           ========================================= */
+        .cover-bg {
+            background-image: url('https://tada6th.netlify.app/images/tadanew.jpg');
+            background-color: #f1f5f9;
+            background-size: cover; 
+            background-position: center bottom;
+            width: 100%; height: 100%;
+            position: absolute; top: 0; left: 0; z-index: 1;
+        }
+        .cover-overlay { background: linear-gradient(to bottom, rgba(255,255,255,0.85) 0%, rgba(244,247,249,0.95) 100%); position: absolute; inset: 0; z-index: 2; }
+        .back-overlay { background: linear-gradient(0deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.80) 100%); position: absolute; inset: 0; z-index: 2; }
+        
+        .cover-content { position: relative; z-index: 3; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; padding: 20mm; text-align: center; }
+        
+        .c-org-en { font-family: 'Poppins', sans-serif; font-size: 11pt; color: var(--accent-blue); letter-spacing: 0.15em; margin-bottom: 2mm; font-weight: 600; }
+        .c-org-tw { font-size: 32pt; font-weight: 900; color: var(--text-main); line-height: 1.2; margin-bottom: 15mm; }
+        .c-sub { font-size: 24pt; font-weight: 700; color: var(--text-muted); margin-bottom: 5mm; }
+        .c-event { font-size: 48pt; font-weight: 900; color: var(--accent-navy); letter-spacing: 6px; margin-bottom: 15mm; }
+        
+        .c-theme { font-size: 20pt; font-weight: 900; color: var(--accent-navy); letter-spacing: 4px; background: #FFF; padding: 15px 30px; border-radius: 8px; border: 1px solid var(--surface-border); margin-bottom: 5mm; }
+        .c-date { font-family: 'Poppins', sans-serif; font-size: 16pt; color: var(--accent-blue); font-weight: 700; letter-spacing: 2px; }
+
+        /* =========================================
+           4. 內部名錄與芳名錄 (Directories & Donations)
+           ========================================= */
+        .name-badge { display: inline-block; font-weight: 700; color: var(--text-main); margin-right: 8px; font-size: 11pt; }
+        .role-label { font-size: 9pt; color: var(--accent-blue); font-weight: 700; margin-right: 4px; display: inline-block; width: 16mm; }
+        
+        .donation-list { list-style: none; margin-top: 3mm; display: grid; grid-template-columns: 1fr; gap: 1mm 6mm; }
+        .donation-list.col-2 { grid-template-columns: 1fr 1fr; }
+        .donation-item { display: flex; justify-content: space-between; align-items: center; padding: 3px 0; border-bottom: 1px dashed var(--surface-border); }
+        .donation-item div { display: flex; align-items: center; }
+        .donation-role { font-size: 8pt; background: var(--surface-border); padding: 2px 6px; border-radius: 4px; color: var(--text-muted); margin-right: 8px; width: 16mm; text-align: center; white-space: nowrap; }
+        .donation-name { font-weight: 700; color: var(--text-main); font-size: 10pt; }
+        .donation-amount { font-family: 'Poppins', sans-serif; font-weight: 600; color: var(--accent-blue); font-size: 10pt; }
+        .donation-total-row { grid-column: 1 / -1; background: var(--bg-gray); padding: 6px 12px; text-align: right; font-weight: 900; color: var(--accent-navy); border: 1px solid var(--surface-border); margin-top: 2mm; border-radius: 4px; font-size: 11pt; }
+
+        /* =========================================
+           5. 時間軸 (Timeline)
+           ========================================= */
+        .timeline { position: relative; padding-left: 20mm; margin-top: 8mm; }
+        .timeline::before { content: ''; position: absolute; left: 6mm; top: 0; bottom: 0; width: 2px; background: var(--accent-blue); }
+        .tl-item { position: relative; margin-bottom: 10mm; }
+        .tl-item::before { content: ''; position: absolute; left: -15.5mm; top: 2px; width: 10px; height: 10px; border-radius: 50%; background: #FFF; border: 3px solid var(--accent-blue); }
+        .tl-time { font-family: 'Poppins', sans-serif; font-size: 14pt; font-weight: 700; color: var(--accent-blue); margin-bottom: 2px; }
+        .tl-title { font-size: 16pt; font-weight: 900; color: var(--text-main); margin-bottom: 5px; }
+        .tl-desc { font-size: 11pt; color: var(--text-muted); line-height: 1.6; }
+
+        /* =========================================
+           6. 活動剪影網格 (Photo Gallery)
+           ========================================= */
+        .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; margin-top: 5mm; }
+        .photo-card { border: 1px solid var(--surface-border); border-radius: 8px; overflow: hidden; background: #FFF; }
+        .photo-card img { width: 100%; height: 50mm; object-fit: cover; display: block; background-color: #f1f5f9; }
+        .photo-caption { padding: 8px; font-size: 10pt; font-weight: 700; text-align: center; color: var(--text-main); background: var(--bg-gray); border-top: 1px solid var(--surface-border); }
+
+        /* =========================================
+           7. 組織系統表專用樣式 (Org Chart)
+           ========================================= */
+        .org-tree { display: flex; flex-direction: column; align-items: center; width: 100%; font-size: 9pt; }
+        .org-node { background: var(--accent-navy); color: #FFF; padding: 6px 12px; border-radius: 4px; font-weight: 700; text-align: center; border: 2px solid var(--accent-navy); }
+        .org-node.sub { background: #FFF; color: var(--accent-navy); }
+        .org-node.highlight { background: var(--accent-yellow); border-color: var(--accent-yellow); color: var(--accent-navy); }
+        .org-line-v { width: 2px; height: 12px; background: var(--accent-navy); }
+        .org-line-h { width: 100%; height: 2px; background: var(--accent-navy); }
+        .org-level { display: flex; justify-content: center; gap: 15px; width: 100%; position: relative; }
+        .org-com-grid { display: grid; grid-template-columns: repeat(11, 1fr); width: 100%; gap: 3px; text-align: center; align-items: start; margin-top: 10px; }
+        .org-com-col { display: flex; flex-direction: column; align-items: center; }
+        .org-com-num { font-weight: 900; margin-bottom: 2px; color: var(--accent-navy); }
+        .org-com-name { writing-mode: vertical-rl; letter-spacing: 2px; height: 120px; font-weight: 700; margin-bottom: 5px; display: flex; align-items: center; }
+        .org-com-leader { font-size: 8pt; color: var(--text-muted); line-height: 1.2; margin-bottom: 5px; }
+        .org-com-desc { writing-mode: vertical-rl; border: 1px solid var(--text-main); padding: 8px 4px; height: 180px; font-size: 8.5pt; letter-spacing: 1px; display: flex; align-items: center; line-height: 1.3; }
+
+        /* =========================================
+           8. 數據表格與章程專用樣式 (Table & Bylaws)
+           ========================================= */
+        .data-table { width: 100%; border-collapse: collapse; margin-top: 2mm; font-size: 10pt; }
+        .data-table th, .data-table td { border: 1px solid var(--surface-border); padding: 6px 8px; text-align: left; }
+        .data-table th { background: var(--accent-navy); color: #FFF; font-weight: 700; }
+        .data-table td { color: var(--text-main); line-height: 1.4; }
+        .data-table tr:nth-child(even) { background-color: var(--bg-gray); }
+        .td-month { text-align: center; font-weight: 900; background: #FFF !important; color: var(--accent-navy); font-size: 12pt; }
+
+        .bylaw-chapter { font-size: 13pt; color: var(--accent-navy); font-weight: 900; margin-top: 6mm; margin-bottom: 2mm; border-bottom: 2px solid var(--surface-border); padding-bottom: 2px; }
+        .bylaw-article { font-size: 10.5pt; color: var(--text-main); line-height: 1.6; margin-bottom: 3mm; text-align: justify; }
+
+        /* =========================================
+           9. 演講嘉賓專用樣式 (Speaker Grid)
+           ========================================= */
+        .speaker-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4mm; margin-top: 5mm; }
+        .speaker-card { border: 1px solid var(--surface-border); border-radius: 8px; overflow: hidden; background: #FFF; box-shadow: 0 2px 4px rgba(0,0,0,0.05); display: flex; flex-direction: column; }
+        .speaker-photo { width: 100%; height: 55mm; background-color: #8C949D; background-size: cover; background-position: center bottom; background-repeat: no-repeat; }
+        .speaker-info { padding: 4mm 2mm; text-align: center; background: #FFF; flex-grow: 1; display: flex; flex-direction: column; justify-content: center; }
+        .speaker-title { font-size: 8pt; color: var(--text-muted); margin-bottom: 2px; font-family: 'Poppins', sans-serif; }
+        .speaker-name { font-size: 13pt; font-weight: 900; color: var(--accent-navy); letter-spacing: 2px; }
+        
+        .speaker-card.special-card { grid-column: span 2; flex-direction: row; align-items: stretch; }
+        .special-card .speaker-photo { width: 45%; height: auto; border-right: 1px solid var(--surface-border); background-position: center top; }
+        .speaker-info-alt { width: 55%; padding: 4mm 6mm; display: flex; flex-direction: column; justify-content: center; text-align: left; }
+        .sp-alt-header { font-size: 10pt; font-weight: 700; color: #0284C7; }
+        .sp-alt-divider { height: 2px; background-color: var(--accent-yellow); width: 100%; margin: 2mm 0; }
+        .sp-alt-name { font-size: 26pt; font-weight: 900; color: var(--accent-navy); margin-bottom: 2mm; letter-spacing: 2px; line-height: 1.1; }
+        .sp-alt-topic { font-size: 9.5pt; font-weight: 900; color: var(--accent-navy); margin-bottom: 1.5mm; line-height: 1.4; }
+        .sp-alt-desc { font-size: 9pt; color: var(--text-muted); line-height: 1.6; text-align: justify; }
+
+        /* 頁碼 */
+        .page-number { position: absolute; bottom: 15mm; right: 20mm; font-family: 'Poppins', sans-serif; font-size: 10pt; color: var(--text-muted); font-weight: 600; }
     </style>
 </head>
 <body>
 
-    <div id="toast-container"></div>
-
-    <div id="main-wrapper">
-        <section id="cover">
-            <div class="cover-overlay"></div>
-            <div class="cover-content fade-in">
-                <h1 class="cover-title-group">
-                    <div class="title-top-section">
-                        <!-- 使用標準相對路徑 ./images/ 確保抓取正確 -->
-                        <img src="./images/logo.png" alt="TADA Logo" class="title-logo" width="160" height="32">
-                        <div class="title-text-section"><div class="main-org">桃園市航空城發展協會</div><div class="cover-en-title">Taoyuan Aerotropolis Development Association</div></div>
-                    </div>
-                    <div class="sub-org">第六屆理事長暨理監事委員會</div>
-                    <span class="main-event">就職典禮</span>
-                </h1>
-                <div class="cover-theme">跨域整合 · 築夢航空<br><span class="cover-date">2026.03.22</span></div>
-            </div>
-        </section>
-
-        <!-- 新增：目錄區塊 -->
-        <section id="toc">
-            <div class="section-title fade-in"><i class="fa-solid fa-list-ul"></i> 目錄</div>
-            <div class="card fade-in">
-                <ul style="list-style: none; padding-left: 0; font-size: 16px; line-height: 2;">
-                    <li><a href="#cover" style="color: var(--text-main); text-decoration: none; font-weight: 700;">封面</a></li>
-                    <li><a href="#origin" style="color: var(--text-main); text-decoration: none; font-weight: 700;">緣起</a></li>
-                    <li><a href="#agenda" style="color: var(--text-main); text-decoration: none; font-weight: 700;">1. 會員大會程序表</a>
-                        <ul style="list-style: none; padding-left: 20px; margin-top: 8px; margin-bottom: 8px;">
-                            <li style="color: var(--text-main);">（一）桃園市航空城發展協會理事長致詞</li>
-                            <li style="color: var(--text-main);">（二）貴賓致詞
-                                <ul style="list-style: none; padding-left: 20px; color: var(--text-muted);">
-                                    <li>- 桃園市市長張善政致詞</li>
-                                    <li>- 桃園市議長邱奕勝致詞</li>
-                                    <li>- 總顧問駱啟銘致詞</li>
-                                    <li>- 桃園市航空城公司前董事長王義川致詞</li>
-                                    <li>- 本會創會理事長黃德華致詞</li>
-                                    <li>- 本會監事長林萬致詞</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="#annual-plan" style="color: var(--text-main); text-decoration: none; font-weight: 700;">桃園市航空城發展協會115年度工作計畫書</a>
-                        <ul style="list-style: none; padding-left: 20px; color: var(--text-muted); margin-top: 8px; margin-bottom: 8px;">
-                            <li>一、航空城組織系統表</li>
-                            <li>二、航空城五大願景</li>
-                            <li>三、航空城年度工作計畫</li>
-                        </ul>
-                    </li>
-                    <li><a href="#donations" style="color: var(--text-main); text-decoration: none; font-weight: 700;">桃園市航空城發展協會理監事年度贊助芳名錄</a></li>
-                    <li><a href="#committee-donations" style="color: var(--text-main); text-decoration: none; font-weight: 700;">桃園市航空城發展協會委員會年度贊助芳名錄</a></li>
-                    <li><a href="#gallery" style="color: var(--text-main); text-decoration: none; font-weight: 700;">桃園市航空城發展協會活動剪影</a></li>
-                    <li><a href="#bylaws" style="color: var(--text-main); text-decoration: none; font-weight: 700;">桃園市航空城發展協會組織章程</a></li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- 新設：緣起 獨立欄目 -->
-        <section id="origin">
-            <div class="section-title fade-in"><i class="fa-solid fa-book-open"></i> 緣起</div>
-            <div class="card fade-in">
-                <p style="font-size: 15px; color: var(--text-muted); line-height: 1.8; text-align: justify; margin: 0;">
-                    作為臺灣門戶城市，桃園國際機場位處國際物流運籌優勢區位，也是亞太城市連結的核心戰略位置。桃園國際機場同時擁有緊鄰臺北港的龐大海運腹地，完整便捷的高速公路、高速鐵路以及機場捷運網路系統。<br><br>因應第三跑道興建需求，必須取得土地的需要，「桃園航空城計畫」透過都市計畫程序，重新調整機場周圍的土地使用，提升桃園國際機場的競爭力，也促進桃園整體發展，並帶動臺灣產業轉型及國際化。<br><br>非常榮幸在此躬逢其盛，桃園市航空城發展協會新任第六屆，期待能承先啟後，結合資源！展現活力！共創願景！
-                </p>
-            </div>
-        </section>
-
-        <section id="agenda">
-            <div class="section-title fade-in"><i class="fa-solid fa-plane-departure"></i> 就職典禮程序表</div>
-            <div class="timeline fade-in">
-                <div class="timeline-item">
-                    <div class="time"><i class="fa-regular fa-clock"></i> 17:00 ~ 18:00</div>
-                    <div class="event-name">貴賓報到聯誼</div>
-                    <div class="event-desc">迎賓交流</div>
-                </div>
-                <div class="timeline-item">
-                    <div class="time"><i class="fa-regular fa-clock"></i> 18:00 ~ 18:30</div>
-                    <div class="event-name">第六屆就職典禮</div>
-                    <div class="event-desc">
-                        <strong style="color: var(--accent-navy); display: block; margin-bottom: 12px;">主席宣布典禮開始</strong>
-                        <strong style="color: var(--accent-navy); display: block; margin-bottom: 12px;">介紹貴賓</strong>
-                        
-                        <strong style="color: var(--accent-navy); display: inline-block; margin-bottom: 10px;">主席致詞</strong>
-                        
-                        <div class="speaker-list-item">
-                            - 理事長 廖本生 致詞
-                        </div>
-                        
-                        <div style="margin-top: 16px;"></div>
-                        <strong style="color: var(--accent-navy); display: inline-block; margin-bottom: 10px;">貴賓致詞</strong>
-                        
-                        <div class="speaker-list-item">
-                            - 桃園市市長 張善政 致詞
-                        </div>
-                        <div class="speaker-list-item">
-                            - 桃園市議長 邱奕勝 致詞
-                        </div>
-                        <div class="speaker-list-item">
-                            - 總顧問 駱啟明 致詞
-                        </div>
-                        <div class="speaker-list-item">
-                            - 桃園市航空城公司前董事長 王義川 致詞
-                        </div>
-                        <div class="speaker-list-item">
-                            - 本會監事長 林 萬 致詞
-                        </div>
-                        
-                        <div style="margin-top: 28px;"></div>
-                        <strong style="color: var(--accent-navy); display: inline-block; margin-bottom: 12px;">頒發證書暨聘書</strong>
-                        <div style="line-height: 1.8; color: var(--text-muted); padding-left: 6px;">
-                            <div style="margin-bottom: 10px;">-頒發理事長當選證書</div>
-                            <div style="margin-bottom: 10px;">-頒發理監事當選證書</div>
-                            <div style="margin-bottom: 10px;">-頒發秘書處及主副主委聘書</div>
-                            <div style="margin-bottom: 0;">-頒發顧問聘書及捐贈儀式</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="time"><i class="fa-regular fa-clock"></i> 18:30 ~ 19:30</div>
-                    <div class="event-name">專題演講</div>
-                    <div class="event-desc" style="line-height: 1.8; padding-top: 14px; padding-bottom: 14px;">
-                        財訊傳媒集團 謝金河 董事長
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="time"><i class="fa-regular fa-clock"></i> 19:30 ~ 21:30</div>
-                    <div class="event-name">航空城之夜聯歡晚會</div>
-                    <div class="event-desc">跨界產業交流餐會</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 新增：演講嘉賓照片列 -->
-        <section id="speakers">
-            <div class="section-title fade-in"><i class="fa-solid fa-microphone-lines"></i> 主席及演講嘉賓</div>
-            <div class="speaker-grid fade-in">
-                <div class="speaker-card">
-                    <!-- 使用標準相對路徑 images/ -->
-                    <div class="speaker-img-wrap"><img src="images/speaker/speaker01.png" alt="廖本生" loading="lazy"></div>
-                    <div class="speaker-info"><div class="title">理事長</div><div class="name">廖本生</div></div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-img-wrap"><img src="images/speaker/speaker02.png" alt="張善政" loading="lazy"></div>
-                    <div class="speaker-info"><div class="title">桃園市 市長</div><div class="name">張善政</div></div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-img-wrap"><img src="images/speaker/speaker03.png" alt="邱奕勝" loading="lazy"></div>
-                    <div class="speaker-info"><div class="title">桃園市議會 議長</div><div class="name">邱奕勝</div></div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-img-wrap"><img src="images/speaker/speaker04.png" alt="駱啟明" loading="lazy"></div>
-                    <div class="speaker-info"><div class="title">總顧問</div><div class="name">駱啟明</div></div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-img-wrap"><img src="images/speaker/speaker05.png" alt="王義川" loading="lazy"></div>
-                    <div class="speaker-info"><div class="title">桃園市航空城公司前董事長</div><div class="name">王義川</div></div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-img-wrap"><img src="images/speaker/speaker07.png" alt="林萬" loading="lazy"></div>
-                    <div class="speaker-info"><div class="title">監事長</div><div class="name">林 萬</div></div>
-                </div>
-                
-                <div class="speaker-card">
-                    <div class="speaker-img-wrap"><img src="images/speaker/speaker08.png" alt="謝金河" loading="lazy"></div>
-                    <div class="speaker-info"><div class="title">財信傳媒集團 董事長</div><div class="name">謝金河</div></div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- 新設：115年度工作計畫書 大欄位 -->
-        <section id="annual-plan">
-            <div class="section-title fade-in"><i class="fa-solid fa-file-lines"></i> 桃園市航空城發展協會115年度工作計畫書</div>
-            
-            <h3 class="fade-in" style="color: var(--accent-navy); margin-bottom: 15px; font-weight: 700; font-size: 20px;">一、桃園市航空城發展協會第六屆組織系統表</h3>
-            <!-- 加入 id="org-chart-section" 供列印斷頁使用 -->
-            <div id="org-chart-section" class="fade-in" style="margin-bottom: 40px;">
-                <!-- 使用標準相對路徑 images/ -->
-                <img src="images/桃園市航空城發展協會第六屆組織系統表.jpg" alt="桃園市航空城發展協會第六屆組織系統表" style="width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 8px; box-shadow: var(--shadow-md);">
-            </div>
-
-            <h3 class="fade-in" style="color: var(--accent-navy); margin-bottom: 15px; font-weight: 700; font-size: 20px;">二、航空城五大願景</h3>
-            <!-- 加入 id="vision-section" 供列印斷頁使用 -->
-            <div id="vision-section" class="card fade-in" style="margin-bottom: 40px;">
-                <div class="card-header"><div class="card-icon"><i class="fa-solid fa-lightbulb"></i></div><h3 style="margin: 0;">結合資源.展現活力.共創願景</h3></div>
-                <ul>
-                    <li>1. 產官學最佳平台</li>
-                    <li>2. 中央地方好橋樑</li>
-                    <li>3. 空港南北一線連</li>
-                    <li>4. 國際門戶展視野</li>
-                    <li>5. 商機願景共開創</li>
-                </ul>
-            </div>
-            
-            <h3 class="fade-in" style="color: var(--accent-navy); margin-bottom: 15px; font-weight: 700; font-size: 20px;">三、工作計劃</h3>
-            <!-- 加入 id="plan-table-section" 供列印斷頁使用 -->
-            <div id="plan-table-section" class="fade-in" style="background: #fff; border-radius: 8px; padding: 16px; border: 1px solid var(--surface-border); overflow-x: auto;">
-                <h3 style="text-align: center; margin-bottom: 16px; font-size: 16px; color: var(--accent-navy);">桃園市航空城發展協會<br>115工作計畫大綱</h3>
-                <table style="width: 100%; border-collapse: collapse; font-size: 12px; min-width: 480px;">
-                    <thead>
-                        <tr style="background: var(--bg-color);">
-                            <th style="border: 1px solid var(--surface-border); padding: 10px; color: var(--accent-navy);">類別</th>
-                            <th style="border: 1px solid var(--surface-border); padding: 10px; color: var(--accent-navy);">工作項目及實施辦法</th>
-                            <th style="border: 1px solid var(--surface-border); padding: 10px; color: var(--accent-navy);">預定進度</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td rowspan="3" style="border: 1px solid var(--surface-border); padding: 10px; text-align: center; font-weight: bold; width: 15%;">壹、會議</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;">1. 召開會員大會</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px; width: 25%;">十二月份舉辦</td>
-                        </tr>
-                        <tr>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;">2. 理監事聯席會</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;">每月召開一次(併辦職業參訪或例會)</td>
-                        </tr>
-                        <tr>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;">3. 必要時召開各種臨時會議</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;">視實際需要舉行</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="4" style="border: 1px solid var(--surface-border); padding: 10px; text-align: center; font-weight: bold;">貳、財務</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;">1. 各項經費收支、登帳、核銷工作</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;">適時辦理</td>
-                        </tr>
-                        <tr>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;">2. 編列下年度經費預算</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;">10月份辦理</td>
-                        </tr>
-                        <tr>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;">3. 整理上年度經決算報告</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;">1月份辦理</td>
-                        </tr>
-                        <tr>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;">4. 收取會費、採購、出納及管理及其他收入</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;">隨到隨辦</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="13" style="border: 1px solid var(--surface-border); padding: 10px; text-align: center; font-weight: bold;">參、活動</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;">1. 產業拜訪(公關拜訪)</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;">不定期舉辦</td>
-                        </tr>
-                        <tr>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;">2. 理監事聯席會</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;">每月(併辦職業參訪或例會)</td>
-                        </tr>
-                        <tr>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;">3. 職業參訪</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;">每半年</td>
-                        </tr>
-                        <tr>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;">4. 全會員例會活動</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;">每三個月</td>
-                        </tr>
-                        <tr>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;">5. 舉辦會外公關聯誼活動</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;">1.就職典禮</td>
-                        </tr>
-                        <tr>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;">6. 參與各項機關社團活動</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;">2.職業參訪</td>
-                        </tr>
-                        <tr>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;">7. 構築產官學最佳互動平台</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;">3.年度旅遊</td>
-                        </tr>
-                        <tr>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;">8. 舉辦、協辦各種產業論壇</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;">4.會員大會</td>
-                        </tr>
-                        <tr>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;">9. 舉辦金融專業論壇活動協助產業金融業務</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;"></td>
-                        </tr>
-                        <tr>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;">10. 舉辦會內聯誼活動</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;"></td>
-                        </tr>
-                        <tr>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;">11. 關心會員,參與婚喪喜慶</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;"></td>
-                        </tr>
-                        <tr>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;">12. 宣揚本會宗旨與會務吸收新會員</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;"></td>
-                        </tr>
-                        <tr>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;">13. 其他</td>
-                            <td style="border: 1px solid var(--surface-border); padding: 10px;"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <section id="donations">
-            <div class="section-title fade-in"><i class="fa-solid fa-hand-holding-dollar"></i> 贊助捐款芳名錄</div>
-            
-            <!-- 加入 id="directors-donations" 供列印斷頁使用 -->
-            <div id="directors-donations" class="fade-in" style="background: #fff; border-radius: 8px; padding: 20px; border: 1px solid var(--surface-border); overflow-x: auto; margin-bottom: 20px;">
-                <h3 style="text-align: center; margin-bottom: 20px; color: var(--accent-navy);">桃園市航空城發展協會理監事年度贊助芳名錄</h3>
-                <table style="width: 100%; border-collapse: collapse; font-size: 15px; min-width: 400px; text-align: center;">
-                    <thead>
-                        <tr style="background: var(--bg-color);">
-                            <th style="border: 1px solid var(--surface-border); padding: 12px; color: var(--accent-navy);">職稱</th>
-                            <th style="border: 1px solid var(--surface-border); padding: 12px; color: var(--accent-navy);">姓名</th>
-                            <th style="border: 1px solid var(--surface-border); padding: 12px; color: var(--accent-navy);">金額 (NT$)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- 理事會部分 -->
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">理事長</td><td style="border: 1px solid var(--surface-border); padding: 10px;">廖本生</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">100,000</td></tr>
-                        
-                        <tr><td rowspan="2" style="border: 1px solid var(--surface-border); padding: 10px;">副理事長</td><td style="border: 1px solid var(--surface-border); padding: 10px;">謝智淵</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">50,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">邱芳琅</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">50,000</td></tr>
-                        
-                        <tr><td rowspan="4" style="border: 1px solid var(--surface-border); padding: 10px;">常務理事</td><td style="border: 1px solid var(--surface-border); padding: 10px;">周淑真</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">40,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">任怡賓</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">40,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">房麗珠</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">40,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">簡木川</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">40,000</td></tr>
-                        
-                        <tr><td rowspan="18" style="border: 1px solid var(--surface-border); padding: 10px;">理事</td><td style="border: 1px solid var(--surface-border); padding: 10px;">徐景文</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">20,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">蔡志勇</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">20,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">張指温</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">20,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">呂榮輝</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">20,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">康博超</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">20,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">楊海霞</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">20,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">李浚霆</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">20,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">林宗德</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">20,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">徐玉郎</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">20,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">吳文輝</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">20,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">陳增逢</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">20,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">林昀霏</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">20,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">陳清淮</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">20,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">孫志堅</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">20,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">臧真豪</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">20,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">蔡旭坤</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">20,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">湯柏齡</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">20,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">陳昌楙</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">20,000</td></tr>
-                        
-                        <tr><td rowspan="3" style="border: 1px solid var(--surface-border); padding: 10px;">候補理事</td><td style="border: 1px solid var(--surface-border); padding: 10px;">簡文金</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">12,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">田雅華</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">12,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">黃荺婭</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">12,000</td></tr>
-
-                        <!-- 監事會部分 -->
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">監事長</td><td style="border: 1px solid var(--surface-border); padding: 10px;">林萬</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">50,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">常務監事</td><td style="border: 1px solid var(--surface-border); padding: 10px;">劉立宏</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">40,000</td></tr>
-                        <tr><td rowspan="5" style="border: 1px solid var(--surface-border); padding: 10px;">監事</td><td style="border: 1px solid var(--surface-border); padding: 10px;">簡材安</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">20,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">韓大富</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">20,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">方孜嘉</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">20,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">張舜勛</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">20,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">張傳俊</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">20,000</td></tr>
-
-                        <tr style="background: var(--bg-color);"><td colspan="2" style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 700; text-align: right;">理監事總計</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 700; color: var(--accent-navy);">946,000</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div id="committee-donations" class="fade-in" style="background: #fff; border-radius: 8px; padding: 20px; border: 1px solid var(--surface-border); overflow-x: auto;">
-                <h3 style="text-align: center; margin-bottom: 20px; color: var(--accent-navy);">桃園市航空城發展協會委員會年度贊助芳名錄</h3>
-                <table style="width: 100%; border-collapse: collapse; font-size: 15px; min-width: 400px; text-align: center;">
-                    <thead>
-                        <tr style="background: var(--bg-color);">
-                            <th style="border: 1px solid var(--surface-border); padding: 12px; color: var(--accent-navy);">職稱</th>
-                            <th style="border: 1px solid var(--surface-border); padding: 12px; color: var(--accent-navy);">姓名</th>
-                            <th style="border: 1px solid var(--surface-border); padding: 12px; color: var(--accent-navy);">金額 (NT$)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td rowspan="11" style="border: 1px solid var(--surface-border); padding: 10px;">主委</td><td style="border: 1px solid var(--surface-border); padding: 10px;">廖仁巍</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">12,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">李泓澔</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">12,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">江宏瑜</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">12,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">魏新樺</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">12,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">任欣元</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">12,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">李宏澤</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">12,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">鍾政甫</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">12,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">蕭育仁</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">12,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">楊睿槿</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">12,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">廖盈騏</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">12,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">謝清鴻</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">12,000</td></tr>
-                        
-                        <tr><td rowspan="5" style="border: 1px solid var(--surface-border); padding: 10px;">副主委</td><td style="border: 1px solid var(--surface-border); padding: 10px;">楊芳羽</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">12,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">顧源倫</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">12,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">戴子強</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">12,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">黃舒琳</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">12,000</td></tr>
-                        <tr><td style="border: 1px solid var(--surface-border); padding: 10px;">賴永盛</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 600; color: var(--accent-yellow);">12,000</td></tr>
-                        
-                        <tr style="background: var(--bg-color);"><td colspan="2" style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 700; text-align: right;">委員會總計</td><td style="border: 1px solid var(--surface-border); padding: 10px; font-weight: 700; color: var(--accent-navy);">192,000</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <!-- 將原本的輪播圖改成滿版向下排列 -->
-        <section id="gallery">
-            <div class="section-title fade-in"><i class="fa-solid fa-camera-retro"></i> 會務與活動剪影</div>
-            
-            <h3 class="fade-in" style="color: var(--accent-navy); margin-bottom: 20px; font-weight: 700;"><i class="fa-solid fa-landmark"></i> 桃園市政府 張善政市長拜訪</h3>
-            <!-- 加入 photo-grid 類別 -->
-            <div class="photo-grid fade-in">
-                <div class="gallery-item"><img src="images/visit/01-01.jpg" alt="活動剪影" loading="lazy"></div>
-                <div class="gallery-item"><img src="images/visit/01-02.jpg" alt="活動剪影" loading="lazy"></div>
-                <div class="gallery-item"><img src="images/visit/01-03.jpg" alt="活動剪影" loading="lazy"></div>
-                <div class="gallery-item"><img src="images/visit/01-04.jpg" alt="活動剪影" loading="lazy"></div>
-                <div class="gallery-item"><img src="images/visit/01-05.jpg" alt="活動剪影" loading="lazy"></div>
-                <div class="gallery-item"><img src="images/visit/01-06.jpg" alt="活動剪影" loading="lazy"></div>
-                <div class="gallery-item"><img src="images/visit/01-07.jpg" alt="活動剪影" loading="lazy"></div>
-                <div class="gallery-item"><img src="images/visit/01-08.jpg" alt="活動剪影" loading="lazy"></div>
-            </div>
-
-            <h3 class="fade-in" style="color: var(--accent-navy); margin-bottom: 20px; font-weight: 700;"><i class="fa-solid fa-building-user"></i> 桃園市議會 邱奕勝議長拜訪</h3>
-            <!-- 加入 photo-grid 類別 -->
-            <div class="photo-grid fade-in">
-                <div class="gallery-item"><img src="images/visit02/03_01.jpg" alt="活動剪影" loading="lazy"></div>
-                <div class="gallery-item"><img src="images/visit02/03_02.jpg" alt="活動剪影" loading="lazy"></div>
-                <div class="gallery-item"><img src="images/visit02/03_03.jpg" alt="活動剪影" loading="lazy"></div>
-            </div>
-
-            <h3 class="fade-in" style="color: var(--accent-navy); margin-bottom: 20px; font-weight: 700;"><i class="fa-solid fa-glass-cheers"></i> 第六屆第二次理監事會暨尾牙餐會</h3>
-            <!-- 加入 photo-grid 類別 -->
-            <div class="photo-grid fade-in">
-                <div class="gallery-item"><img src="images/gallery/02_01.jpg" alt="活動剪影" loading="lazy"></div>
-                <div class="gallery-item"><img src="images/gallery/02_02.jpg" alt="活動剪影" loading="lazy"></div>
-                <div class="gallery-item"><img src="images/gallery/02_03.jpg" alt="活動剪影" loading="lazy"></div>
-                <div class="gallery-item"><img src="images/gallery/02_04.jpg" alt="活動剪影" loading="lazy"></div>
-                <div class="gallery-item"><img src="images/gallery/02_05.jpg" alt="活動剪影" loading="lazy"></div>
-                <div class="gallery-item"><img src="images/gallery/02_06.jpg" alt="活動剪影" loading="lazy"></div>
-                <div class="gallery-item"><img src="images/gallery/02_07.jpg" alt="活動剪影" loading="lazy"></div>
-                <div class="gallery-item"><img src="images/gallery/02_08.jpg" alt="活動剪影" loading="lazy"></div>
-                <div class="gallery-item"><img src="images/gallery/02_09.jpg" alt="活動剪影" loading="lazy"></div>
-                <div class="gallery-item"><img src="images/gallery/02_10.jpg" alt="活動剪影" loading="lazy"></div>
-            </div>
-        </section>
-
-        <!-- 將組織章程替換為直接呈現 PDF 原文內容 -->
-        <section id="bylaws">
-            <div class="section-title fade-in"><i class="fa-solid fa-scale-balanced"></i> 桃園市航空城發展協會章程</div>
-            
-            <div class="fade-in" style="background: #fff; border-radius: 8px; padding: 20px; border: 1px solid var(--surface-border); color: var(--text-main); line-height: 1.8; font-size: 12px;">
-                <h3 style="text-align: center; margin-bottom: 16px; font-size: 16px; color: var(--accent-navy);">桃園市航空城發展協會章程</h3>
-                
-                <h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; color: var(--accent-navy);">第一章 總則</h4>
-                <p style="margin-bottom: 10px;">第一條 本會名稱為桃園市航空城發展協會(以下簡稱本會。)</p>
-                <p style="margin-bottom: 10px;">第二條 本會以配合中央實施桃園航空城之發展計畫,並促進青埔高鐵特區城市建築美學及工商發展等相關社會公益活動為宗旨,非以營利為目的。</p>
-                <p style="margin-bottom: 10px;">第三條 本會以桃園市行政區域為組織區域。</p>
-                <p style="margin-bottom: 10px;">第四條 本會會址設於主管機關所在地區。</p>
-                <p style="margin-bottom: 10px;">第五條 本會之任務如下：<br>
-                一、配合中央實施桃園航空城之發展計畫。<br>
-                二、積極協助政府推動桃園航空城、青埔高鐵特區城市建築美學及工商之事宜。<br>
-                三、結合市內之地方仕紳對桃園航空城、青埔高鐵特區城市建築美學及工商提出建言。<br>
-                四、舉辦產、官、學論壇,建言桃園航空城、青埔高鐵特區城市建築美學及工商之方向。<br>
-                五、受理政府機關之委託,擬定政策之發展參考。<br>
-                六、作為政府與民間之溝通平台,以利政策之推動。</p>
-                <p style="margin-bottom: 10px;">第六條 本會之主管機關為桃園市政府。本會之目的事業應受各該事業主管機關之指導、監督。</p>
-
-                <h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; color: var(--accent-navy);">第二章 會員</h4>
-                <p style="margin-bottom: 10px;">第七條 本會會員申請資格如下：<br>
-                一、個人會員:贊同本會宗旨,年滿二十歲,具有中華民國國籍,未受禁治產之宣告或未受有罪行判決,設籍或工作或投資、置產於本市確定者。申請入會為會員。入會費1,000元,常年會費2,000元。<br>
-                二、團體會員:贊同本會宗旨之機構團體並設籍或工作或投資、置產於本市確定者,申請入會為團體會員。每一團體會員得推派代表二至三人,行使會員權利。入會費2,000元,常年會費每一代表2,000元。</p>
-                <p style="margin-bottom: 10px;">第八條 會員(會員代表)有表決權、選舉權、被選舉權、罷免權,每一會員(會員代表)為一權。</p>
-                <p style="margin-bottom: 10px;">第九條 本會會員有遵守本會章程、決議及繳納會費之義務。</p>
-                <p style="margin-bottom: 10px;">第十條 會員(會員代表)有違反法令、本會章程或不遵守會員大會決議時,得經理事會決議,予警告或停權處分,其危害團體情節重大時,得經會員大會決議予以除名。</p>
-                <p style="margin-bottom: 10px;">第十一條 會員有下列情事之一者為出會：<br>
-                一、喪失會員資格。<br>
-                二、會員連續二年以上未繳會費,經書面通知期限內尚未繳納者。<br>
-                三、經會員大會決議「除名」。</p>
-                <p style="margin-bottom: 10px;">第十二條 會員得以書面敘明理由向本會聲明退會。</p>
-                <p style="margin-bottom: 10px;">第十三條 會員經出會或退會,已繳納或捐贈之各項費用,均不予退還。</p>
-
-                <h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; color: var(--accent-navy);">第三章 組織及職權</h4>
-                <p style="margin-bottom: 10px;">第十四條 本會以「會員大會」為最高權力機構;會員大會閉會期間,由理事會代行職權,監事會為監察機構。</p>
-                <p style="margin-bottom: 10px;">第十五條 會員人數若超過三百人時,按分區比例選出會員代表,再召開「會員代表大會」,行使會員大會職權。會員代表任期二年,其名額及選舉辦法由理事會擬定,報請桃園市政府核備後行之。</p>
-                <p style="margin-bottom: 10px;">第十六條 會員大會之職權如下：<br>
-                一、訂定與變更章程。<br>
-                二、選舉及罷免理事、監事。<br>
-                三、議決入會費、常年會費、事業費及會員捐款事宜。<br>
-                四、議決年度工作計劃、工作報告及預算決算。<br>
-                五、議決會員(會員代表)之除名處分。<br>
-                六、議決財產之處分。<br>
-                七、議決本會之解散。<br>
-                八、議決與會員權利義務有關之其他重大事項。</p>
-                <p style="margin-bottom: 10px;">第十七條 本會設理事二十五人,監事七人,由會員(會員大會)選舉之,分別成立理事會、監事會。選舉前項理事、監事時,同時按得票順序得選出候補理事八人、候補監事二人,遇理事、監事出缺時,分別依序遞補之。本屆理事會得提出下屆理事、監事候選人參考名單。理事、監事得採用通訊選舉,但不得連續辦理。通訊辦法由理事會通過,報請桃園市政府核備後行之。</p>
-                <p style="margin-bottom: 10px;">第十八條 理事會之職權如下：<br>
-                一、審定會員(會員代表)之資格。<br>
-                二、選舉或罷免常務理事、理事長。<br>
-                三、決議理事、常務理事、理事長之辭職。<br>
-                四、聘免本會工作人員之審定。<br>
-                五、擬定年度工作計劃、工作報告及預算決算。<br>
-                六、其他有關會務應執行之事項。</p>
-                <p style="margin-bottom: 10px;">第十九條 理事會設常務理事七人,由理事互選之,並由常務理事中選舉一人為理事長(不得連選連任),二人為副理事長,理事長對內綜理督導會務,對外代表本會,並擔任會員大會及理事會主席。理事長因事不能執行職務時,由理事長指定副理事長代理之,理事長、常務理事出缺時,應於一個月內補選之。</p>
-                <p style="margin-bottom: 10px;">第二十條 監事會之職權如下：<br>
-                一、監察理事會工作之執行。<br>
-                二、審核年度決算。<br>
-                三、選舉及罷免常務監事。<br>
-                四、議決監事及常務監事之辭職。<br>
-                五、其他依法應執行監察事項。</p>
-                <p style="margin-bottom: 10px;">第廿一條 監事會設常務監事二人,由監事互選之,並由常務監事中選舉一人為監事長,監察日常會務,並擔任監事會主席。監事長因事不能執行職務時,由常務監事互推一人代理之。監事長出缺時,應於一個月內補選之。</p>
-                <p style="margin-bottom: 10px;">第廿二條 理事、監事均為無給職,任期二年,連選得連任。</p>
-                <p style="margin-bottom: 10px;">第廿三條 監理事有下列情事之一時,應即解任。<br>
-                一、喪失會員(會員代表)資格。<br>
-                二、因故辭職,經理事會或監事會決議通過者。<br>
-                三、被罷免或撤免者。<br>
-                四、受停權處分期間逾任期二分之一者。</p>
-                <p style="margin-bottom: 10px;">第廿四條 本會置秘書長一人,承理事長之命處理本會事務,置財務長一人,承理事長之命處理本會財務,並報請主管機關備查。其他工作人員若干人,由理事長提名理事會通過後聘免之。前項工作人員不得由選任之理事監事擔任。工作人員權責及分層負責事項由理事會另定之。</p>
-                <p style="margin-bottom: 10px;">第廿五條 本會得設各種委員會、小組或其他分支機構等內部作業組織,其組織簡則經理事會通過後行,變更時亦同。</p>
-                <p style="margin-bottom: 10px;">第廿六條 本會得經過理事會通過,聘請名譽理事長、顧問各若干人,其聘期與理事、監事之任期同。</p>
-
-                <h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; color: var(--accent-navy);">第四章 會議</h4>
-                <p style="margin-bottom: 10px;">第廿七條 會員大會分定期會議與臨時會議兩種,由理事長召集,召集時,除緊急事故之臨時會議外,應於十五日前以書面通知。定期會議每年召開一次;臨時會議,理事會認為必要,或經會員(會員代表)五分之一以上之請求,或監事會函請召集時召開之。</p>
-                <p style="margin-bottom: 10px;">第廿八條 會員大會不能親自出席大會時,得以書面委託其他會員(會員代表)代理,每一會員(會員代表)以代理一人為限。</p>
-                <p style="margin-bottom: 10px;">第廿九條 會員大會之決議,以會員(會員代表)過半數之出席,出席人數超過半數之同意行之。但下列事項之決議,需出席人數三分之二以上同意。<br>
-                一、章程訂定與變更。<br>
-                二、會員(會員代表)之除名。<br>
-                三、財產之處分。<br>
-                四、本會之解散。<br>
-                五、其他與會員權利、義務有關之重大事項。</p>
-                <p style="margin-bottom: 10px;">第三十條 理事會每三個月召開一次,監事會每三個月召開一次,必要時得召開聯席會議或臨時會議。前項會議召集時除臨時會議外,應於七日以書面通知,會議之決議,各以理事、監事過半數之出席,出席人數較多數之同意行之。</p>
-                <p style="margin-bottom: 10px;">第卅一條 理事應出席理事會議,監事應出席監事會議,不得委託他人出席,理事、監事連續二次無故不出席理事、監事會者視同辭職。</p>
-
-                <h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; color: var(--accent-navy);">第五章 經費及會計</h4>
-                <p style="margin-bottom: 10px;">第卅二條 本會之經費來源如下：<br>
-                一、入會費壹仟元整(1,000元),會費新台幣貳仟元整。(2,000元) 團體會員常年會費每一代表新台幣貳仟元整。<br>
-                二、會員捐款。<br>
-                四、其他收入。</p>
-                <p style="margin-bottom: 10px;">第卅三條 本會會計年度以曆年為準,自每年一月一日起至十二月三十一日止。</p>
-                <p style="margin-bottom: 10px;">第卅四條 本會每年於會計年度開始前兩個月,由理事會編造年度工作計劃、收支預算表、員工待遇表,提會員大會通過(會員大會因故未能如期召開者,先提理、監事聯席會議通過),於會計年度開始前,報主管機關核備。應於會計年度終了後兩個月,由理事會編造年度工作報告、收支決算、現金出納表、資產負債表、財產目錄、及基金收支表,送監事會審核後,造具審核意見書送還理事會,提會員大會通過,於三月底前報請主管機關核備(大會未能如期召開時,應先報主管機關)。</p>
-                <p style="margin-bottom: 10px;">第卅五條 本會於解散後,剩餘財產歸屬所在地之地方自治團體或主管機關指定之機關團體所有。</p>
-
-                <h4 style="margin-top: 16px; margin-bottom: 8px; font-size: 14px; color: var(--accent-navy);">第六章 附則</h4>
-                <p style="margin-bottom: 10px;">第卅六條 本章程未規定事項,悉依有關法令規定辦理。</p>
-                <p style="margin-bottom: 10px;">第卅七條 本章程經會員(會員代表)大會通過,報請桃園市政府核備後施行,變更時亦同。</p>
-                <p style="margin-bottom: 10px;">第卅八條 本章程經本會100年7月7日第一屆第一次會員(會員代表)大會通過報經桃園市政府8月1日府社發字第1000304062號函准予備查。<br>
-                本章程第一次修正於106年08月25日第三屆第一次會員(會員代表)大會通過報經桃園市政府備查。<br>
-                本章程第二次修正於109年12月05日第四屆第一次會員(會員代表)大會通過報經桃園市政府備查。<br>
-                本章程第三次修正於112年12月27日第五屆第一次會員(會員代表)大會通過報經桃園市政府備查。<br>
-                本章程第四次修正於114年03月29日第五屆第二次會員(會員代表)大會通過報經桃園市政府備查後生效。</p>
-            </div>
-        </section>
-
-        <section id="back-cover">
-            <div class="back-cover-overlay"></div>
-            <div class="back-content">
-                <h2 class="fade-in back-title-sm" style="color: var(--accent-navy);">攜手共創</h2>
-                <h2 class="fade-in back-title-md" style="color: var(--accent-navy);">桃園航空城新未來</h2>
-                <h2 class="fade-in back-title-lg" style="color: #009FE3;">NEXT GEN</h2>
-            </div>
-        </section>
-
+    <!-- ==============================================
+         [Page 00] 封面
+         ============================================== -->
+    <div class="a4-page full-bleed">
+        <div class="cover-bg"></div>
+        <div class="cover-overlay"></div>
+        <div class="cover-content">
+            <img src="https://tada6th.netlify.app/images/logo.png" alt="Logo" style="height: 60px; margin-bottom: 10mm;" onerror="this.style.display='none'">
+            <div class="c-org-en">TAOYUAN AEROTROPOLIS DEVELOPMENT ASSOCIATION</div>
+            <div class="c-org-tw">桃園市航空城發展協會</div>
+            <div class="c-sub">第六屆理事長暨理監事委員會</div>
+            <div class="c-event">就職典禮</div>
+            <div class="c-theme">跨域整合 · 築夢航空</div>
+            <div class="c-date">2026.03.22</div>
+        </div>
     </div>
 
-    <!-- JavaScript 腳本區塊 -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            
-            // --- 漸顯動畫 ---
-            const faders = document.querySelectorAll('.fade-in');
-            const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -20px 0px" };
-            const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-                entries.forEach(entry => {
-                    if (!entry.isIntersecting) return;
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                });
-            }, appearOptions);
+    <!-- ==============================================
+         [Page 01] 緣起與五大願景
+         ============================================== -->
+    <div class="a4-page">
+        <div class="page-header">
+            <div class="page-title"><i class="fa-solid fa-book-open"></i> 協會緣起與願景</div>
+            <div class="page-subtitle">ORIGIN & VISION</div>
+        </div>
 
-            faders.forEach(fader => appearOnScroll.observe(fader));
-        });
-    </script>
+        <div class="content-box" style="margin-bottom: 15mm;">
+            <h3><i class="fa-solid fa-plane-up"></i> 成立緣起</h3>
+            <p style="margin-bottom: 10px;">作為臺灣門戶城市，桃園國際機場位處國際物流運籌優勢區位，也是亞太城市連結的核心戰略位置。桃園國際機場同時擁有緊鄰臺北港的龐大海運腹地，完整便捷的高速公路、高速鐵路以及機場捷運網路系統。</p>
+            <p style="margin-bottom: 10px;">因應第三跑道興建需求，必須取得土地的需要，「桃園航空城計畫」透過都市計畫程序，重新調整機場周圍的土地使用，提升桃園國際機場的競爭力，也促進桃園整體發展，並帶動臺灣產業轉型及國際化。</p>
+            <p>非常榮幸在此躬逢其盛，桃園市航空城發展協會新任第六屆，期待能承先啟後，結合資源！展現活力！共創願景！</p>
+        </div>
+
+        <div class="content-box">
+            <h3><i class="fa-solid fa-star"></i> 航空城五大願景</h3>
+            <p style="margin-bottom: 15px; font-weight: 700; color: var(--accent-navy);">結合資源 · 展現活力 · 共創願景</p>
+            <div class="grid-2col">
+                <ul class="styled-list">
+                    <li>產官學最佳平台</li>
+                    <li>中央地方好橋樑</li>
+                    <li>空港南北一線連</li>
+                </ul>
+                <ul class="styled-list">
+                    <li>國際門戶展視野</li>
+                    <li>商機願景共開創</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-number">01</div>
+    </div>
+
+    <!-- ==============================================
+         [Page 02] 典禮程序表
+         ============================================== -->
+    <div class="a4-page">
+        <div class="page-header">
+            <div class="page-title"><i class="fa-solid fa-clock"></i> 就職典禮程序表</div>
+            <div class="page-subtitle">CEREMONY AGENDA</div>
+        </div>
+
+        <div class="timeline">
+            <div class="tl-item">
+                <div class="tl-time">17:00 ~ 18:00</div>
+                <div class="tl-title">貴賓報到聯誼</div>
+                <div class="tl-desc">迎賓交流、入席就座。</div>
+            </div>
+            
+            <div class="tl-item">
+                <div class="tl-time">18:00 ~ 18:30</div>
+                <div class="tl-title">第六屆就職典禮</div>
+                <div class="tl-desc">
+                    <p style="font-weight: 700; color: var(--accent-navy); margin-bottom: 5px;">主席宣布典禮開始 / 介紹貴賓</p>
+                    <p style="margin-bottom: 5px;"><strong>主席致詞：</strong>理事長 廖本生</p>
+                    <p><strong>貴賓致詞：</strong></p>
+                    <ul style="padding-left: 20px; margin-bottom: 10px; list-style-type: disc;">
+                        <li>桃園市市長 張善政</li>
+                        <li>桃園市議長 邱奕勝</li>
+                        <li>總顧問 駱啟明</li>
+                        <li>立法委員 王義川</li>
+                        <li>本會監事長 林萬</li>
+                    </ul>
+                    <p style="font-weight: 700; color: var(--accent-navy); margin-bottom: 5px; margin-top: 10px;">頒發證書暨聘書</p>
+                    <ul style="padding-left: 20px; list-style-type: circle;">
+                        <li>頒發理事長及理監事當選證書</li>
+                        <li>頒發秘書處及主副主委、顧問聘書暨捐贈儀式</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tl-item">
+                <div class="tl-time">18:30 ~ 19:30</div>
+                <div class="tl-title">專題演講</div>
+                <div class="tl-desc">財信傳媒集團 <strong>謝金河 董事長</strong><br>講題：2026年全球政經趨勢與台灣未來展望</div>
+            </div>
+
+            <div class="tl-item">
+                <div class="tl-time">19:30 ~ 21:30</div>
+                <div class="tl-title">航空城之夜聯歡晚會</div>
+                <div class="tl-desc">跨界產業交流餐會、合影留念、圓滿賦歸。</div>
+            </div>
+        </div>
+        <div class="page-number">02</div>
+    </div>
+
+    <!-- ==============================================
+         [Page 03] 主席及演講嘉賓
+         ============================================== -->
+    <div class="a4-page">
+        <div class="page-header">
+            <div class="page-title"><i class="fa-solid fa-microphone-lines"></i> 主席及演講嘉賓</div>
+            <div class="page-subtitle">CHAIRMAN & GUEST SPEAKERS</div>
+        </div>
+
+        <div class="speaker-grid">
+            <div class="speaker-card">
+                <div class="speaker-photo" style="background-image: url('https://tada6th.netlify.app/images/speaker/speaker01.png'); background-color: #8C949D;"></div>
+                <div class="speaker-info">
+                    <div class="speaker-title">理事長</div>
+                    <div class="speaker-name">廖本生</div>
+                </div>
+            </div>
+            
+            <div class="speaker-card">
+                <div class="speaker-photo" style="background-image: url('https://tada6th.netlify.app/images/speaker/speaker02.png'); background-color: #8C949D; background-size: auto 95%;"></div>
+                <div class="speaker-info">
+                    <div class="speaker-title">桃園市 市長</div>
+                    <div class="speaker-name">張善政</div>
+                </div>
+            </div>
+
+            <div class="speaker-card">
+                <div class="speaker-photo" style="background-image: url('https://tada6th.netlify.app/images/speaker/speaker03.png'); background-color: #8C949D;"></div>
+                <div class="speaker-info">
+                    <div class="speaker-title">桃園市議會 議長</div>
+                    <div class="speaker-name">邱奕勝</div>
+                </div>
+            </div>
+
+            <div class="speaker-card">
+                <div class="speaker-photo" style="background-image: url('https://tada6th.netlify.app/images/speaker/speaker04.png'); background-color: #8C949D;"></div>
+                <div class="speaker-info">
+                    <div class="speaker-title">總顧問</div>
+                    <div class="speaker-name">駱啟明</div>
+                </div>
+            </div>
+
+            <div class="speaker-card">
+                <div class="speaker-photo" style="background-image: url('https://tada6th.netlify.app/images/speaker/speaker05.png'); background-color: #8C949D; background-size: auto 95%;"></div>
+                <div class="speaker-info">
+                    <div class="speaker-title">立法委員</div>
+                    <div class="speaker-name">王義川</div>
+                </div>
+            </div>
+
+            <div class="speaker-card">
+                <div class="speaker-photo" style="background-image: url('https://tada6th.netlify.app/images/speaker/speaker07.png'); background-color: #8C949D;"></div>
+                <div class="speaker-info">
+                    <div class="speaker-title">監事長</div>
+                    <div class="speaker-name">林&emsp;萬</div>
+                </div>
+            </div>
+
+            <div class="speaker-card special-card">
+                <div class="speaker-photo" style="background-image: url('https://tada6th.netlify.app/images/speaker/speaker08.png'); background-color: #8C949D;"></div>
+                <div class="speaker-info-alt">
+                    <div class="sp-alt-header">專題演講</div>
+                    <div class="sp-alt-divider"></div>
+                    <div class="sp-alt-name" style="margin-bottom: 2px;">謝金河</div>
+                    <div style="font-size: 11pt; font-weight: 700; color: var(--text-muted); margin-bottom: 4mm; letter-spacing: 1px;">財信傳媒集團 董事長</div>
+                    <div class="sp-alt-topic" style="font-size: 10.5pt;">講題：2026年全球政經趨勢與台灣未來展望</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-number">03</div>
+    </div>
+
+    <!-- ==============================================
+         [Page 04] 理事會名錄與芳名錄
+         ============================================== -->
+    <div class="a4-page">
+        <div class="page-header">
+            <div class="page-title"><i class="fa-solid fa-users"></i> 理事會名錄</div>
+            <div class="page-subtitle">BOARD OF DIRECTORS</div>
+        </div>
+
+        <div class="content-box" style="padding: 6mm 10mm;">
+            <div style="margin-bottom: 8px;"><span class="role-label">理事長</span> <span class="name-badge" style="font-size: 14pt;">廖本生</span></div>
+            <div style="margin-bottom: 8px;"><span class="role-label">副理事長</span> <span class="name-badge">謝智淵</span> <span class="name-badge">邱芳琅</span></div>
+            <div style="margin-bottom: 8px;"><span class="role-label">常務理事</span> <span class="name-badge">周淑真</span> <span class="name-badge">任怡賓</span> <span class="name-badge">房麗珠</span> <span class="name-badge">簡木川</span></div>
+            
+            <div style="margin-top: 12px; margin-bottom: 4px;"><span class="role-label">理事</span></div>
+            <div style="line-height: 1.8;">
+                <span class="name-badge">徐景文</span> <span class="name-badge">蔡志勇</span> <span class="name-badge">張指温</span> <span class="name-badge">呂榮輝</span> 
+                <span class="name-badge">康博超</span> <span class="name-badge">楊海霞</span> <span class="name-badge">李浚霆</span> <span class="name-badge">林宗德</span> 
+                <span class="name-badge">徐玉郎</span> <span class="name-badge">吳文輝</span> <span class="name-badge">陳增逢</span> <span class="name-badge">林昀霏</span> 
+                <span class="name-badge">陳清淮</span> <span class="name-badge">孫志堅</span> <span class="name-badge">臧真豪</span> <span class="name-badge">蔡旭坤</span> 
+                <span class="name-badge">湯柏齡</span> <span class="name-badge">陳昌楙</span>
+            </div>
+
+            <div style="margin-top: 12px; margin-bottom: 4px;"><span class="role-label" style="color: var(--text-muted);">候補理事</span></div>
+            <div><span class="name-badge">簡文金</span> <span class="name-badge">田雅華</span> <span class="name-badge">黃荺婭</span></div>
+        </div>
+
+        <h3 style="font-size: 13pt; margin-top: 6mm; margin-bottom: 2mm;"><i class="fa-solid fa-hand-holding-dollar" style="color: var(--accent-yellow);"></i> 第六屆理事贊助捐款芳名錄</h3>
+        <ul class="donation-list col-2">
+            <li class="donation-item"><div><span class="donation-role">理事長</span><span class="donation-name">廖本生</span></div><div class="donation-amount">NT$ 100,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">副理事長</span><span class="donation-name">謝智淵</span></div><div class="donation-amount">NT$ 50,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">副理事長</span><span class="donation-name">邱芳琅</span></div><div class="donation-amount">NT$ 50,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">常務理事</span><span class="donation-name">周淑真</span></div><div class="donation-amount">NT$ 40,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">常務理事</span><span class="donation-name">任怡賓</span></div><div class="donation-amount">NT$ 40,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">常務理事</span><span class="donation-name">房麗珠</span></div><div class="donation-amount">NT$ 40,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">常務理事</span><span class="donation-name">簡木川</span></div><div class="donation-amount">NT$ 40,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">理事</span><span class="donation-name">徐景文</span></div><div class="donation-amount">NT$ 20,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">理事</span><span class="donation-name">蔡志勇</span></div><div class="donation-amount">NT$ 20,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">理事</span><span class="donation-name">張指温</span></div><div class="donation-amount">NT$ 20,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">理事</span><span class="donation-name">呂榮輝</span></div><div class="donation-amount">NT$ 20,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">理事</span><span class="donation-name">康博超</span></div><div class="donation-amount">NT$ 20,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">理事</span><span class="donation-name">楊海霞</span></div><div class="donation-amount">NT$ 20,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">理事</span><span class="donation-name">李浚霆</span></div><div class="donation-amount">NT$ 20,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">理事</span><span class="donation-name">林宗德</span></div><div class="donation-amount">NT$ 20,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">理事</span><span class="donation-name">徐玉郎</span></div><div class="donation-amount">NT$ 20,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">理事</span><span class="donation-name">吳文輝</span></div><div class="donation-amount">NT$ 20,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">理事</span><span class="donation-name">陳增逢</span></div><div class="donation-amount">NT$ 20,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">理事</span><span class="donation-name">林昀霏</span></div><div class="donation-amount">NT$ 20,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">理事</span><span class="donation-name">陳清淮</span></div><div class="donation-amount">NT$ 20,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">理事</span><span class="donation-name">孫志堅</span></div><div class="donation-amount">NT$ 20,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">理事</span><span class="donation-name">臧真豪</span></div><div class="donation-amount">NT$ 20,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">理事</span><span class="donation-name">蔡旭坤</span></div><div class="donation-amount">NT$ 20,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">理事</span><span class="donation-name">湯柏齡</span></div><div class="donation-amount">NT$ 20,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">理事</span><span class="donation-name">陳昌楙</span></div><div class="donation-amount">NT$ 20,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">候補理事</span><span class="donation-name">簡文金</span></div><div class="donation-amount">NT$ 12,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">候補理事</span><span class="donation-name">田雅華</span></div><div class="donation-amount">NT$ 12,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">候補理事</span><span class="donation-name">黃荺婭</span></div><div class="donation-amount">NT$ 12,000</div></li>
+            <li class="donation-total-row">總計捐款額：NT$ 756,000</li>
+        </ul>
+        <div class="page-number">04</div>
+    </div>
+
+    <!-- ==============================================
+         [Page 05] 監事會與秘書處
+         ============================================== -->
+    <div class="a4-page" style="padding-top: 15mm; padding-bottom: 15mm;">
+        <div class="page-header" style="margin-bottom: 6mm;">
+            <div class="page-title"><i class="fa-solid fa-user-shield"></i> 監事會暨秘書處</div>
+            <div class="page-subtitle">SUPERVISORY BOARD & SECRETARIAT</div>
+        </div>
+
+        <div class="content-box" style="padding: 4mm 8mm; margin-bottom: 4mm;">
+            <h3 style="margin-bottom: 2mm;"><i class="fa-solid fa-balance-scale"></i> 監事會名錄</h3>
+            <div style="margin-bottom: 4px;"><span class="role-label">監事長</span> <span class="name-badge" style="font-size: 12pt;">林萬</span></div>
+            <div style="margin-bottom: 4px;"><span class="role-label">常務監事</span> <span class="name-badge">劉立宏</span></div>
+            <div style="margin-bottom: 0;"><span class="role-label">監事</span> 
+                <span class="name-badge">簡材安</span> <span class="name-badge">韓大富</span> <span class="name-badge">方孜嘉</span> 
+                <span class="name-badge">張舜勛</span> <span class="name-badge">張傳俊</span>
+            </div>
+        </div>
+
+        <h3 style="font-size: 11pt; margin-top: 2mm; margin-bottom: 1mm;"><i class="fa-solid fa-hand-holding-dollar" style="color: var(--accent-yellow);"></i> 監事贊助捐款芳名錄</h3>
+        <ul class="donation-list col-2" style="margin-bottom: 6mm;">
+            <li class="donation-item"><div><span class="donation-role">監事長</span><span class="donation-name">林萬</span></div><div class="donation-amount">NT$ 50,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">常務監事</span><span class="donation-name">劉立宏</span></div><div class="donation-amount">NT$ 40,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">監事</span><span class="donation-name">簡材安</span></div><div class="donation-amount">NT$ 20,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">監事</span><span class="donation-name">韓大富</span></div><div class="donation-amount">NT$ 20,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">監事</span><span class="donation-name">方孜嘉</span></div><div class="donation-amount">NT$ 20,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">監事</span><span class="donation-name">張舜勛</span></div><div class="donation-amount">NT$ 20,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">監事</span><span class="donation-name">張傳俊</span></div><div class="donation-amount">NT$ 20,000</div></li>
+            <li class="donation-total-row">總計捐款額：NT$ 190,000</li>
+        </ul>
+
+        <div class="content-box" style="padding: 4mm 8mm; margin-bottom: 4mm;">
+            <h3 style="margin-bottom: 2mm;"><i class="fa-solid fa-briefcase"></i> 秘書處 (會務幹部)</h3>
+            <ul class="styled-list" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2mm;">
+                <li style="margin-bottom: 0;"><strong>秘書長：</strong> 周君蔚</li>
+                <li style="margin-bottom: 0;"><strong>財務長：</strong> 何雅娟</li>
+                <li style="margin-bottom: 0;"><strong>法律顧問：</strong> 鄭仁壽</li>
+                <li style="margin-bottom: 0;"><strong>特別助理：</strong> 徐雅菁</li>
+                <li style="margin-bottom: 0; grid-column: span 2;"><strong>執行秘書：</strong> 廖亞庭</li>
+            </ul>
+        </div>
+
+        <h3 style="font-size: 11pt; margin-top: 2mm; margin-bottom: 1mm;"><i class="fa-solid fa-hand-holding-dollar" style="color: var(--accent-yellow);"></i> 秘書處贊助捐款芳名錄</h3>
+        <ul class="donation-list col-2">
+            <li class="donation-item"><div><span class="donation-role">秘書長</span><span class="donation-name">周君蔚</span></div><div class="donation-amount">NT$ 12,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">財務長</span><span class="donation-name">何雅娟</span></div><div class="donation-amount">NT$ 12,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">法律顧問</span><span class="donation-name">鄭仁壽</span></div><div class="donation-amount">NT$ 12,000</div></li>
+            <li class="donation-item"><div><span class="donation-role">特別助理</span><span class="donation-name">徐雅菁</span></div><div class="donation-amount">NT$ 12,000</div></li>
+            <li class="donation-total-row">總計捐款額：NT$ 48,000</li>
+        </ul>
+        
+        <div class="page-number" style="bottom: 10mm;">05</div>
+    </div>
+
+    <!-- ==============================================
+         [Page 06] 專門委員會 (縮小比例滿載版)
+         ============================================== -->
+    <div class="a4-page" style="padding-top: 15mm; padding-bottom: 15mm;">
+        <div class="page-header" style="margin-bottom: 6mm;">
+            <div class="page-title"><i class="fa-solid fa-sitemap"></i> 專門委員會名錄</div>
+            <div class="page-subtitle">COMMITTEES</div>
+        </div>
+
+        <div class="grid-2col" style="gap: 2mm 4mm;">
+            <div class="content-box" style="padding: 3mm 4mm; margin-bottom: 0;">
+                <h4 style="font-size: 10.5pt; margin-bottom: 2px; color: var(--text-main);">01. 建築美學委員會</h4>
+                <div style="font-size: 8.5pt; color: var(--accent-navy); margin-bottom: 2px; font-weight: 700;">主委：廖仁巍 | 副主委：楊芳羽</div>
+                <div style="font-size: 8pt; color: var(--text-muted);">建築美學公展表揚活動、設計工程建案觀摩。</div>
+            </div>
+            <div class="content-box" style="padding: 3mm 4mm; margin-bottom: 0;">
+                <h4 style="font-size: 10.5pt; margin-bottom: 2px; color: var(--text-main);">02. 國際事務委員會</h4>
+                <div style="font-size: 8.5pt; color: var(--accent-navy); margin-bottom: 2px; font-weight: 700;">主委：李泓澔 | 副主委：顧源倫</div>
+                <div style="font-size: 8pt; color: var(--text-muted);">國際航空城觀摩活動、結盟交流先進航空城市。</div>
+            </div>
+            <div class="content-box" style="padding: 3mm 4mm; margin-bottom: 0;">
+                <h4 style="font-size: 10.5pt; margin-bottom: 2px; color: var(--text-main);">03. 公共關係委員會</h4>
+                <div style="font-size: 8.5pt; color: var(--accent-navy); margin-bottom: 2px; font-weight: 700;">主委：江宏瑜 | 副主委：戴子強</div>
+                <div style="font-size: 8pt; color: var(--text-muted);">地方中央公關大串聯、空港連線南北大串聯。</div>
+            </div>
+            <div class="content-box" style="padding: 3mm 4mm; margin-bottom: 0;">
+                <h4 style="font-size: 10.5pt; margin-bottom: 2px; color: var(--text-main);">04. 產業發展委員會</h4>
+                <div style="font-size: 8.5pt; color: var(--accent-navy); margin-bottom: 2px; font-weight: 700;">主委：魏新樺</div>
+                <div style="font-size: 8pt; color: var(--text-muted);">鏈結各產業促進異業交流與商業機會。</div>
+            </div>
+            <div class="content-box" style="padding: 3mm 4mm; margin-bottom: 0;">
+                <h4 style="font-size: 10.5pt; margin-bottom: 2px; color: var(--text-main);">05. 社區活動委員會</h4>
+                <div style="font-size: 8.5pt; color: var(--accent-navy); margin-bottom: 2px; font-weight: 700;">主委：任欣元</div>
+                <div style="font-size: 8pt; color: var(--text-muted);">結合社區居民舉辦聯誼活動、社區產業商展。</div>
+            </div>
+            <div class="content-box" style="padding: 3mm 4mm; margin-bottom: 0;">
+                <h4 style="font-size: 10.5pt; margin-bottom: 2px; color: var(--text-main);">06. 航空城事務委員會</h4>
+                <div style="font-size: 8.5pt; color: var(--accent-navy); margin-bottom: 2px; font-weight: 700;">主委：李宏澤</div>
+                <div style="font-size: 8pt; color: var(--text-muted);">航空城會務運作執行、產官溝通平台。</div>
+            </div>
+            <div class="content-box" style="padding: 3mm 4mm; margin-bottom: 0;">
+                <h4 style="font-size: 10.5pt; margin-bottom: 2px; color: var(--text-main);">07. 金融服務委員會</h4>
+                <div style="font-size: 8.5pt; color: var(--accent-navy); margin-bottom: 2px; font-weight: 700;">主委：鍾政甫</div>
+                <div style="font-size: 8pt; color: var(--text-muted);">結合金融產業通暢融資服務、分享融資訊息。</div>
+            </div>
+            <div class="content-box" style="padding: 3mm 4mm; margin-bottom: 0;">
+                <h4 style="font-size: 10.5pt; margin-bottom: 2px; color: var(--text-main);">08. 選舉事務委員會</h4>
+                <div style="font-size: 8.5pt; color: var(--accent-navy); margin-bottom: 2px; font-weight: 700;">主委：蕭育仁</div>
+                <div style="font-size: 8pt; color: var(--text-muted);">舉辦專業研習分享活動、建構法規諮詢平台。</div>
+            </div>
+            <div class="content-box" style="padding: 3mm 4mm; margin-bottom: 0;">
+                <h4 style="font-size: 10.5pt; margin-bottom: 2px; color: var(--text-main);">09. 會員活動委員會</h4>
+                <div style="font-size: 8.5pt; color: var(--accent-navy); margin-bottom: 2px; font-weight: 700;">主委：楊睿槿 | 副主委：黃舒琳</div>
+                <div style="font-size: 8pt; color: var(--text-muted);">舉辦會員旅遊團康活動、充實會員例會活動。</div>
+            </div>
+            <div class="content-box" style="padding: 3mm 4mm; margin-bottom: 0;">
+                <h4 style="font-size: 10.5pt; margin-bottom: 2px; color: var(--text-main);">10. 會員擴展委員會</h4>
+                <div style="font-size: 8.5pt; color: var(--accent-navy); margin-bottom: 2px; font-weight: 700;">主委：廖盈騏</div>
+                <div style="font-size: 8pt; color: var(--text-muted);">促進會員參與率激發活動力、招募優秀新會員。</div>
+            </div>
+            <div class="content-box" style="padding: 3mm 4mm; margin-bottom: 0; grid-column: span 2;">
+                <h4 style="font-size: 10.5pt; margin-bottom: 2px; color: var(--text-main);">11. 形象傳播委員會</h4>
+                <div style="font-size: 8.5pt; color: var(--accent-navy); margin-bottom: 2px; font-weight: 700;">主委：謝清鴻 | 副主委：賴永盛</div>
+                <div style="font-size: 8pt; color: var(--text-muted);">航空城攝影紀錄形象包裝、活動美學編輯傳播。</div>
+            </div>
+        </div>
+
+        <h3 style="font-size: 11pt; margin-top: 4mm; margin-bottom: 2mm;"><i class="fa-solid fa-hand-holding-dollar" style="color: var(--accent-yellow);"></i> 委員贊助捐款芳名錄</h3>
+        <ul class="donation-list col-2">
+            <li class="donation-item" style="padding: 2px 0;"><div><span class="donation-role">主委</span><span class="donation-name">廖仁巍</span></div><div class="donation-amount">NT$ 12,000</div></li>
+            <li class="donation-item" style="padding: 2px 0;"><div><span class="donation-role">副主委</span><span class="donation-name">楊芳羽</span></div><div class="donation-amount">NT$ 12,000</div></li>
+            <li class="donation-item" style="padding: 2px 0;"><div><span class="donation-role">主委</span><span class="donation-name">李泓澔</span></div><div class="donation-amount">NT$ 12,000</div></li>
+            <li class="donation-item" style="padding: 2px 0;"><div><span class="donation-role">副主委</span><span class="donation-name">顧源倫</span></div><div class="donation-amount">NT$ 12,000</div></li>
+            <li class="donation-item" style="padding: 2px 0;"><div><span class="donation-role">主委</span><span class="donation-name">江宏瑜</span></div><div class="donation-amount">NT$ 12,000</div></li>
+            <li class="donation-item" style="padding: 2px 0;"><div><span class="donation-role">副主委</span><span class="donation-name">戴子強</span></div><div class="donation-amount">NT$ 12,000</div></li>
+            <li class="donation-item" style="padding: 2px 0;"><div><span class="donation-role">主委</span><span class="donation-name">魏新樺</span></div><div class="donation-amount">NT$ 12,000</div></li>
+            <li class="donation-item" style="padding: 2px 0;"><div><span class="donation-role">主委</span><span class="donation-name">任欣元</span></div><div class="donation-amount">NT$ 12,000</div></li>
+            <li class="donation-item" style="padding: 2px 0;"><div><span class="donation-role">主委</span><span class="donation-name">李宏澤</span></div><div class="donation-amount">NT$ 12,000</div></li>
+            <li class="donation-item" style="padding: 2px 0;"><div><span class="donation-role">主委</span><span class="donation-name">鍾政甫</span></div><div class="donation-amount">NT$ 12,000</div></li>
+            <li class="donation-item" style="padding: 2px 0;"><div><span class="donation-role">主委</span><span class="donation-name">蕭育仁</span></div><div class="donation-amount">NT$ 12,000</div></li>
+            <li class="donation-item" style="padding: 2px 0;"><div><span class="donation-role">主委</span><span class="donation-name">楊睿槿</span></div><div class="donation-amount">NT$ 12,000</div></li>
+            <li class="donation-item" style="padding: 2px 0;"><div><span class="donation-role">副主委</span><span class="donation-name">黃舒琳</span></div><div class="donation-amount">NT$ 12,000</div></li>
+            <li class="donation-item" style="padding: 2px 0;"><div><span class="donation-role">主委</span><span class="donation-name">廖盈騏</span></div><div class="donation-amount">NT$ 12,000</div></li>
+            <li class="donation-item" style="padding: 2px 0;"><div><span class="donation-role">主委</span><span class="donation-name">謝清鴻</span></div><div class="donation-amount">NT$ 12,000</div></li>
+            <li class="donation-item" style="padding: 2px 0;"><div><span class="donation-role">副主委</span><span class="donation-name">賴永盛</span></div><div class="donation-amount">NT$ 12,000</div></li>
+            <li class="donation-total-row" style="margin-top: 1mm;">總計捐款額：NT$ 192,000</li>
+        </ul>
+        <div class="page-number" style="bottom: 10mm;">06</div>
+    </div>
+
+    <!-- ==============================================
+         [Page 07] 組織系統表 (全新直向無錯位排版)
+         ============================================== -->
+    <div class="a4-page">
+        <div class="page-header">
+            <div class="page-title"><i class="fa-solid fa-network-wired"></i> 組織系統表</div>
+            <div class="page-subtitle">ORGANIZATION CHART</div>
+        </div>
+
+        <h3 style="text-align: center; font-size: 16pt; margin-bottom: 5mm; color: var(--text-main);">桃園市航空城發展協會第六屆組織系統表</h3>
+        
+        <div class="org-tree">
+            <div class="org-node" style="font-size: 12pt; width: 120px;">會員大會</div>
+            <div class="org-line-v" style="height: 15px;"></div>
+            
+            <div class="org-level" style="gap: 50px;">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <div class="org-node sub" style="width: 100px;">顧問</div>
+                    <div class="org-line-v"></div>
+                    <div class="org-node sub" style="width: 100px; padding: 4px;">總顧問<br>駱啟明</div>
+                </div>
+                
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <div class="org-node" style="width: 100px;">理事會</div>
+                    <div class="org-line-v"></div>
+                    <div class="org-node" style="width: 100px; padding: 4px;">理事長<br>廖本生</div>
+                </div>
+
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <div class="org-node sub" style="width: 100px;">監事會</div>
+                    <div class="org-line-v"></div>
+                    <div class="org-node sub" style="width: 100px; padding: 4px;">監事長<br>林萬</div>
+                </div>
+            </div>
+
+            <div class="org-line-v" style="height: 15px;"></div>
+            <div class="org-node highlight" style="width: 140px; font-size: 11pt;">秘書處</div>
+            <div class="org-line-v" style="height: 15px;"></div>
+
+            <div class="org-level" style="gap: 15px;">
+                <div class="org-line-h" style="position: absolute; top: 0; width: 80%; left: 10%;"></div>
+                
+                <div style="display: flex; flex-direction: column; align-items: center; margin-top: -1px;">
+                    <div class="org-line-v"></div>
+                    <div class="org-node sub" style="width: 90px; padding: 4px;">法律顧問<br>鄭仁壽</div>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; margin-top: -1px;">
+                    <div class="org-line-v"></div>
+                    <div class="org-node sub" style="width: 90px; padding: 4px;">秘書長<br>周君蔚</div>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; margin-top: -1px;">
+                    <div class="org-line-v"></div>
+                    <div class="org-node sub" style="width: 90px; padding: 4px;">財務長<br>何雅娟</div>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; margin-top: -1px;">
+                    <div class="org-line-v"></div>
+                    <div class="org-node sub" style="width: 90px; padding: 4px;">理事長特助<br>徐雅菁</div>
+                </div>
+            </div>
+
+            <div class="org-line-v" style="height: 15px;"></div>
+            <div class="org-node sub" style="width: 100px; padding: 4px;">執行秘書<br>廖亞庭</div>
+
+            <div style="margin-top: 15mm; margin-bottom: 5mm; text-align: center;">
+                <div style="font-weight: 700; color: var(--text-muted);">結合資源 ． 展現活力 ． 共創願景</div>
+                <div class="org-node" style="margin: 5px auto; width: 180px; font-size: 11pt;">航空城五大願景</div>
+                <div style="font-size: 8.5pt; font-weight: 700; color: var(--accent-navy); letter-spacing: 1px;">產官學最佳平台 ‧ 中央地方好橋樑 ‧ 空港南北一線連 ‧ 國際門戶展視野 ‧ 商機願景共開創</div>
+            </div>
+
+            <div class="org-line-h" style="width: 95%; margin-top: 5px;"></div>
+            
+            <div class="org-com-grid">
+                <div class="org-com-col"><div class="org-line-v" style="height: 8px;"></div><div class="org-com-num">一</div><div class="org-com-name">建築美學委員會</div><div class="org-com-leader">主委 廖仁巍<br>副委 楊芳羽</div><div class="org-com-desc">建築美學公展表揚活動<br>建築設計工程建案觀摩</div></div>
+                <div class="org-com-col"><div class="org-line-v" style="height: 8px;"></div><div class="org-com-num">二</div><div class="org-com-name">國際事務委員會</div><div class="org-com-leader">主委 李泓澔<br>副委 顧源倫</div><div class="org-com-desc">舉辦國際航空城市觀摩活動<br>結盟交流國際先進航空城市</div></div>
+                <div class="org-com-col"><div class="org-line-v" style="height: 8px;"></div><div class="org-com-num">三</div><div class="org-com-name">公共關係委員會</div><div class="org-com-leader">主委 江宏瑜<br>副委 戴子強</div><div class="org-com-desc">地方中央公關大串聯<br>空港連線南北大串聯</div></div>
+                <div class="org-com-col"><div class="org-line-v" style="height: 8px;"></div><div class="org-com-num">四</div><div class="org-com-name">產業發展委員會</div><div class="org-com-leader">主委 魏新樺<br>&nbsp;</div><div class="org-com-desc">鏈結各產業促進商業機會<br>鏈結各產業促進異業交流</div></div>
+                <div class="org-com-col"><div class="org-line-v" style="height: 8px;"></div><div class="org-com-num">五</div><div class="org-com-name">社區活動委員會</div><div class="org-com-leader">主委 任欣元<br>&nbsp;</div><div class="org-com-desc">結合社區居民舉辦聯誼活動<br>結合社區產業舉辦商展活動</div></div>
+                <div class="org-com-col"><div class="org-line-v" style="height: 8px;"></div><div class="org-com-num">六</div><div class="org-com-name">航空城事務委員會</div><div class="org-com-leader">主委 李宏澤<br>&nbsp;</div><div class="org-com-desc">航空城會務運作執行<br>航空城產官溝通平台</div></div>
+                <div class="org-com-col"><div class="org-line-v" style="height: 8px;"></div><div class="org-com-num">七</div><div class="org-com-name">金融服務委員會</div><div class="org-com-leader">主委 鍾政甫<br>&nbsp;</div><div class="org-com-desc">結合金融產業通暢融資服務<br>結合金融產業分享融資訊息</div></div>
+                <div class="org-com-col"><div class="org-line-v" style="height: 8px;"></div><div class="org-com-num">八</div><div class="org-com-name">選舉事務委員會</div><div class="org-com-leader">主委 蕭育仁<br>&nbsp;</div><div class="org-com-desc">舉辦專業研習分享活動<br>建構法規整合諮詢平台</div></div>
+                <div class="org-com-col"><div class="org-line-v" style="height: 8px;"></div><div class="org-com-num">九</div><div class="org-com-name">會員活動委員會</div><div class="org-com-leader">主委 楊睿槿<br>副委 黃舒琳</div><div class="org-com-desc">舉辦會員旅遊團康活動<br>舉辦充實會員例會活動</div></div>
+                <div class="org-com-col"><div class="org-line-v" style="height: 8px;"></div><div class="org-com-num">十</div><div class="org-com-name">會員擴展委員會</div><div class="org-com-leader">主委 廖盈騏<br>&nbsp;</div><div class="org-com-desc">招募優秀新會員充實新動力<br>促進會員參與率激發活動力</div></div>
+                <div class="org-com-col"><div class="org-line-v" style="height: 8px;"></div><div class="org-com-num">十一</div><div class="org-com-name">形象傳播委員會</div><div class="org-com-leader">主委 謝清鴻<br>副委 賴永盛</div><div class="org-com-desc" style="height:180px;">航空城活動美學編輯傳播<br>航空城攝影紀錄形象包裝</div></div>
+            </div>
+        </div>
+
+        <div class="page-number">07</div>
+    </div>
+
+    <!-- ==============================================
+         [Page 08] 年度工作計畫 (1/2)
+         ============================================== -->
+    <div class="a4-page">
+        <div class="page-header">
+            <div class="page-title"><i class="fa-solid fa-clipboard-list"></i> 115 年度工作計畫大綱</div>
+            <div class="page-subtitle">ANNUAL WORK PLAN</div>
+        </div>
+
+        <table class="data-table">
+            <tr>
+                <th width="8%">月份</th>
+                <th width="32%">活動性質及實施名稱</th>
+                <th width="25%">主辦</th>
+                <th width="25%">協辦</th>
+                <th width="10%">備註</th>
+            </tr>
+            <tr>
+                <td rowspan="2" class="td-month">十一</td>
+                <td>第六屆會員大會(12/21)</td>
+                <td>會員活動委員會</td>
+                <td>選舉事務委員會</td>
+                <td>例會</td>
+            </tr>
+            <tr>
+                <td>公關活動(12/30)</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="td-month">一</td>
+                <td>理監事會/尾牙(1/12)</td>
+                <td>秘書處</td>
+                <td>其他各委員會</td>
+                <td>擇期召開</td>
+            </tr>
+            <tr>
+                <td rowspan="2" class="td-month">二</td>
+                <td>公關活動(1/6)訪議長</td>
+                <td>公共關係委員會</td>
+                <td>其他各委員會</td>
+                <td>不定期</td>
+            </tr>
+            <tr>
+                <td>理監事會</td>
+                <td>秘書處</td>
+                <td>其他各委員會</td>
+                <td>擇期召開</td>
+            </tr>
+            <tr>
+                <td rowspan="2" class="td-month">三</td>
+                <td>公關活動(2/2)訪市長</td>
+                <td>公共關係委員會</td>
+                <td>其他各委員會</td>
+                <td>不定期</td>
+            </tr>
+            <tr>
+                <td>理監事會/籌備會(3/4)</td>
+                <td>秘書處</td>
+                <td>其他各委員會</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td rowspan="4" class="td-month">四</td>
+                <td>例會/就職典禮(3/22)</td>
+                <td>會員活動委員會</td>
+                <td>其他各委員會</td>
+                <td>例會</td>
+            </tr>
+            <tr>
+                <td>公關活動</td>
+                <td>公共關係委員會</td>
+                <td>其他各委員會</td>
+                <td>隨機</td>
+            </tr>
+            <tr>
+                <td>理監事會/參觀總統府(4/29)</td>
+                <td>秘書處</td>
+                <td>其他各委員會</td>
+                <td>擇期召開</td>
+            </tr>
+            <tr>
+                <td>產業拜訪</td>
+                <td>產業發展委員會</td>
+                <td>其他各委員會</td>
+                <td>隨機</td>
+            </tr>
+            <tr>
+                <td rowspan="2" class="td-month">五</td>
+                <td>產業拜訪</td>
+                <td>產業發展委員會</td>
+                <td>金融服務委員會</td>
+                <td>隨機</td>
+            </tr>
+            <tr>
+                <td>公關活動</td>
+                <td>公共關係委員會</td>
+                <td>其他各委員會</td>
+                <td>隨機</td>
+            </tr>
+        </table>
+        
+        <div class="page-number">08</div>
+    </div>
+
+    <!-- ==============================================
+         [Page 09] 年度工作計畫 (2/2)
+         ============================================== -->
+    <div class="a4-page">
+        <table class="data-table" style="margin-top: 0;">
+            <tr>
+                <th width="8%">月份</th>
+                <th width="32%">活動性質及實施名稱</th>
+                <th width="25%">主辦</th>
+                <th width="25%">協辦</th>
+                <th width="10%">備註</th>
+            </tr>
+            <tr>
+                <td rowspan="3" class="td-month">六</td>
+                <td>理監事會</td>
+                <td>秘書處</td>
+                <td>其他各委員會</td>
+                <td>擇期召開</td>
+            </tr>
+            <tr>
+                <td>產業拜訪</td>
+                <td>產業發展委員會</td>
+                <td>其他各委員會</td>
+                <td>隨機</td>
+            </tr>
+            <tr>
+                <td>職業參訪/研華科技</td>
+                <td>產業發展委員會</td>
+                <td>其他各委員會</td>
+                <td>例會</td>
+            </tr>
+            <tr>
+                <td rowspan="3" class="td-month">七</td>
+                <td>理監事會</td>
+                <td>秘書處</td>
+                <td>其他各委員會</td>
+                <td>擇期召開</td>
+            </tr>
+            <tr>
+                <td>產業拜訪</td>
+                <td>產業發展委員會</td>
+                <td>金融服務委員會</td>
+                <td>隨機</td>
+            </tr>
+            <tr>
+                <td>公關活動</td>
+                <td>公共關係委員會</td>
+                <td>其他各委員會</td>
+                <td>隨機</td>
+            </tr>
+            <tr>
+                <td rowspan="3" class="td-month">八</td>
+                <td>理監事會</td>
+                <td>秘書處</td>
+                <td>其他各委員會</td>
+                <td>擇期召開</td>
+            </tr>
+            <tr>
+                <td>產業拜訪</td>
+                <td>產業發展委員會</td>
+                <td>其他各委員會</td>
+                <td>隨機</td>
+            </tr>
+            <tr>
+                <td>公關活動</td>
+                <td>公共關係委員會</td>
+                <td>其他各委員會</td>
+                <td>隨機</td>
+            </tr>
+            <tr>
+                <td rowspan="4" class="td-month">九</td>
+                <td>理監事會</td>
+                <td>秘書處</td>
+                <td>其他各委員會</td>
+                <td>擇期召開</td>
+            </tr>
+            <tr>
+                <td>產業拜訪</td>
+                <td>產業發展委員會</td>
+                <td>其他各委員會</td>
+                <td>隨機</td>
+            </tr>
+            <tr>
+                <td>公關活動</td>
+                <td>公共關係委員會</td>
+                <td>其他各委員會</td>
+                <td>隨機</td>
+            </tr>
+            <tr>
+                <td>年度旅遊</td>
+                <td>社區活動委員會</td>
+                <td>會員活動委員會</td>
+                <td>例會</td>
+            </tr>
+            <tr>
+                <td rowspan="3" class="td-month">十</td>
+                <td>理監事會</td>
+                <td>秘書處</td>
+                <td>其他各委員會</td>
+                <td>擇期召開</td>
+            </tr>
+            <tr>
+                <td>產業拜訪</td>
+                <td>產業發展委員會</td>
+                <td>其他各委員會</td>
+                <td>隨機</td>
+            </tr>
+            <tr>
+                <td>公關活動</td>
+                <td>公共關係委員會</td>
+                <td>其他各委員會</td>
+                <td>隨機</td>
+            </tr>
+            <tr>
+                <td rowspan="3" class="td-month">十一</td>
+                <td>理監事會</td>
+                <td>秘書處</td>
+                <td>其他各委員會</td>
+                <td>擇期召開</td>
+            </tr>
+            <tr>
+                <td>產業拜訪</td>
+                <td>產業發展委員會</td>
+                <td>其他各委員會</td>
+                <td>隨機</td>
+            </tr>
+            <tr>
+                <td>公關活動</td>
+                <td>公共關係委員會</td>
+                <td>其他各委員會</td>
+                <td>隨機</td>
+            </tr>
+            <tr>
+                <td rowspan="3" class="td-month">十二</td>
+                <td>會員大會/理監事會</td>
+                <td>會員活動委員會</td>
+                <td>社區活動委員會</td>
+                <td>例會</td>
+            </tr>
+            <tr>
+                <td>產業拜訪</td>
+                <td>產業發展委員會</td>
+                <td>其他各委員會</td>
+                <td>隨機</td>
+            </tr>
+            <tr>
+                <td>公關活動</td>
+                <td>公共關係委員會</td>
+                <td>其他各委員會</td>
+                <td>隨機</td>
+            </tr>
+        </table>
+        
+        <div class="page-number">09</div>
+    </div>
+
+    <!-- ==============================================
+         [Page 10] 組織章程 (1/5)
+         ============================================== -->
+    <div class="a4-page">
+        <div class="page-header">
+            <div class="page-title"><i class="fa-solid fa-scale-balanced"></i> 組織章程</div>
+            <div class="page-subtitle">BYLAWS OF THE ASSOCIATION</div>
+        </div>
+
+        <h3 style="text-align: center; font-size: 16pt; margin-bottom: 3mm; color: var(--text-main);">桃園市航空城發展協會章程</h3>
+        
+        <div class="bylaw-chapter">第 一 章 總則</div>
+        <div class="bylaw-article">
+            <strong>第 一 條</strong> 本會名稱為桃園市航空城發展協會（以下簡稱本會。）
+        </div>
+        <div class="bylaw-article">
+            <strong>第 二 條</strong> 本會以配合中央實施桃園航空城之發展計畫，並促進青埔高鐵特區城市建築美學及工商發展等相關社會公益活動為宗旨，非以營利為目的。
+        </div>
+        <div class="bylaw-article">
+            <strong>第 三 條</strong> 本會以桃園市行政區域為組織區域。
+        </div>
+        <div class="bylaw-article">
+            <strong>第 四 條</strong> 本會會址設於主管機關所在地區。
+        </div>
+        <div class="bylaw-article">
+            <strong>第 五 條</strong> 本會之任務如下:<br>
+            一、配合中央實施桃園航空城之發展計畫。<br>
+            二、積極協助政府推動桃園航空城、青埔高鐵特區城市建築美學及工商之事宜。<br>
+            三、結合市內之地方仕紳對桃園航空城、青埔高鐵特區城市建築美學及工商提出建言。<br>
+            四、舉辦產、官、學論壇，建言桃園航空城、青埔高鐵特區城市建築美學及工商之方向。<br>
+            五、受理政府機關之委託，擬定政策之發展參考。<br>
+            六、作為政府與民間之溝通平台，以利政策之推動。
+        </div>
+        <div class="bylaw-article">
+            <strong>第 六 條</strong> 本會之主管機關為桃園市政府。本會之目的事業應受各該事業主管機關之指導、監督。
+        </div>
+
+        <div class="bylaw-chapter">第 二 章 會員</div>
+        <div class="bylaw-article">
+            <strong>第 七 條</strong> 本會會員申請資格如下：<br>
+            一、個人會員：贊同本會宗旨，年滿二十歲，具有中華民國國籍，未受禁治產之宣告或未受有罪行判決，設籍或工作或投資、置產於本市確定者。申請入會為會員。入會費 1000.-，常年會費 2000 元。<br>
+            二、團體會員：贊同本會宗旨之機構團體並設籍或工作或投資、置產於本市確定者，申請入會為團體會員。每一團體會員得推派代表二至三人，行使會員權利。入會費 2000.-，常年會費每一代表 2000 元。
+        </div>
+        <div class="bylaw-article">
+            <strong>第 八 條</strong> 會員（會員代表）有表決權、選舉權、被選舉權、罷免權，每一會員（會員代表）為一權。
+        </div>
+        <div class="bylaw-article">
+            <strong>第 九 條</strong> 本會會員有遵守本會章程、決議及繳納會費之義務。
+        </div>
+
+        <div class="page-number">10</div>
+    </div>
+
+    <!-- ==============================================
+         [Page 11] 組織章程 (2/5)
+         ============================================== -->
+    <div class="a4-page">
+        <div class="bylaw-article" style="margin-top: 10mm;">
+            <strong>第 十 條</strong> 會員（會員代表）有違反法令、本會章程或不遵守會員大會決議時，得經理事會決議，予警告或停權處分，其危害團體情節重大時，得經會員大會決議予以除名。
+        </div>
+        <div class="bylaw-article">
+            <strong>第 十一 條</strong> 會員有下列情事之一者為出會：<br>
+            一、喪失會員資格。<br>
+            二、會員連續二年以上未繳會費，經書面通知期限內尚未繳納者。<br>
+            三、經會員大會決議「除名」。
+        </div>
+        <div class="bylaw-article">
+            <strong>第 十二 條</strong> 會員得以書面敘明理由向本會聲明退會。
+        </div>
+        <div class="bylaw-article">
+            <strong>第 十三 條</strong> 會員經出會或退會，已繳納或捐贈之各項費用，均不予退還。
+        </div>
+
+        <div class="bylaw-chapter">第 三 章 組織及職權</div>
+        <div class="bylaw-article">
+            <strong>第 十四 條</strong> 本會以「會員大會」為最高權力機構；會員大會閉會期間，由理事會代行職權，監事會為監察機構。
+        </div>
+        <div class="bylaw-article">
+            <strong>第 十五 條</strong> 會員人數若超過三百人時，按分區比例選出會員代表，再召開「會員代表大會」，行使會員大會職權。會員代表任期二年，其名額及選舉辦法由理事會擬定，報請桃園市政府核備後行之。
+        </div>
+        <div class="bylaw-article">
+            <strong>第 十六 條</strong> 會員大會之職權如下：<br>
+            一、訂定與變更章程。<br>
+            二、選舉及罷免理事、監事。<br>
+            三、議決入會費、常年會費、事業費及會員捐款事宜。<br>
+            四、議決年度工作計劃、工作報告及預算決算。<br>
+            五、議決會員（會員代表）之除名處分。<br>
+            六、議決財產之處分。<br>
+            七、議決本會之解散。<br>
+            八、議決與會員權利義務有關之其他重大事項。
+        </div>
+        <div class="bylaw-article">
+            <strong>第 十七 條</strong> 本會設理事二十五人，監事七人，由會員（會員大會）選舉之，分別成立理事會、監事會。選舉前項理事、監事時，同時按得票順序得選出候補理事八人、候補監事二人，遇理事、監事出缺時，分別依序遞補之。本屆理事會得提出下屆理事、監事候選人參考名單。理事、監事得採用通訊選舉，但不得連續辦理。通訊辦法由理事會通過，報請桃園市政府核備後行之。
+        </div>
+        <div class="bylaw-article">
+            <strong>第 十八 條</strong> 理事會之職權如下：<br>
+            一、審定會員（會員代表）之資格。<br>
+            二、選舉或罷免常務理事、理事長。<br>
+            三、決議理事、常務理事、理事長之辭職。<br>
+            四、聘免本會工作人員之審定。<br>
+            五、擬定年度工作計劃、工作報告及預算決算。<br>
+            六、其他有關會務應執行之事項。
+        </div>
+        
+        <div class="page-number">11</div>
+    </div>
+
+    <!-- ==============================================
+         [Page 12] 組織章程 (3/5)
+         ============================================== -->
+    <div class="a4-page">
+        <div class="bylaw-article" style="margin-top: 10mm;">
+            <strong>第 十九 條</strong> 理事會設常務理事七人，由理事互選之，並由常務理事中選舉一人為理事長(不得連選連任)，二人為副理事長，理事長對內綜理督導會務，對外代表本會，並擔任會員大會及理事會主席。理事長因事不能執行職務時，由理事長指定副理事長代理之，理事長、常務理事出缺時，應於一個月內補選之。
+        </div>
+        <div class="bylaw-article">
+            <strong>第 二十 條</strong> 監事會之職權如下：<br>
+            一、監察理事會工作之執行。<br>
+            二、審核年度決算。<br>
+            三、選舉及罷免常務監事。<br>
+            四、議決監事及常務監事之辭職。<br>
+            五、其他依法應執行監察事項。
+        </div>
+        <div class="bylaw-article">
+            <strong>第 廿一 條</strong> 監事會設常務監事二人，由監事互選之，並由常務監事中選舉一人為監事長，監察日常會務，並擔任監事會主席。監事長因事不能執行職務時，由常務監事互推一人代理之。監事長出缺時，應於一個月內補選之。
+        </div>
+        <div class="bylaw-article">
+            <strong>第 廿二 條</strong> 理事、監事均為無給職，任期二年，連選得連任。
+        </div>
+        <div class="bylaw-article">
+            <strong>第 廿三 條</strong> 監理事有下列情事之一時，應即解任。<br>
+            一、喪失會員（會員代表）資格。<br>
+            二、因故辭職，經理事會或監事會決議通過者。<br>
+            三、被罷免或撤免者。<br>
+            四、受停權處分期間逾任期二分之一者。
+        </div>
+        <div class="bylaw-article">
+            <strong>第 廿四 條</strong> 本會置秘書長一人，承理事長之命處理本會事務，置財務長一人，承理事長之命處理本會財務，並報請主管機關備查。其他工作人員若干人，由理事長提名理事會通過後聘免之。前項工作人員不得由選任之理事監事擔任。工作人員權責及分層負責事項由理事會另定之。
+        </div>
+        
+        <div class="page-number">12</div>
+    </div>
+
+    <!-- ==============================================
+         [Page 13] 組織章程 (4/5)
+         ============================================== -->
+    <div class="a4-page">
+        <div class="bylaw-article" style="margin-top: 10mm;">
+            <strong>第 廿五 條</strong> 本會得設各種委員會、小組或其他分支機構等內部作業組織，其組織簡則經理事會通過後行，變更時亦同。
+        </div>
+        <div class="bylaw-article">
+            <strong>第 廿六 條</strong> 本會得經過理事會通過，聘請名譽理事長、顧問各若干人，其聘期與理事、監事之任期同。
+        </div>
+        
+        <div class="bylaw-chapter">第 四 章 會 議</div>
+        <div class="bylaw-article">
+            <strong>第 廿七 條</strong> 會員大會分定期會議與臨時會議兩種，由理事長召集，召集時，除緊急事故之臨時會議外，應於十五日前以書面通知。定期會議每年召開一次；臨時會議，理事會認為必要，或經會員（會員代表）五分之一以上之請求，或監事會函請召集時召開之。
+        </div>
+        <div class="bylaw-article">
+            <strong>第 廿八 條</strong> 會員大會不能親自出席大會時，得以書面委託其他會員（會員代表）代理，每一會員（會員代表）以代理一人為限。
+        </div>
+        <div class="bylaw-article">
+            <strong>第 廿九 條</strong> 會員大會之決議，以會員（會員代表）過半數之出席，出席人數超過半數之同意行之。但下列事項之決議，需出席人數三分之二以上同意。<br>
+            一、章程訂定與變更。<br>
+            二、會員（會員代表）之除名。<br>
+            三、財產之處分。<br>
+            四、本會之解散。<br>
+            五、其他與會員權利、義務有關之重大事項。
+        </div>
+        <div class="bylaw-article">
+            <strong>第 三十 條</strong> 理事會每三個月召開一次，監事會每三個月召開一次，必要時得召開聯席會議或臨時會議。前項會議召集時除臨時會議外，應於七日以書面通知，會議之決議，各以理事、監事過半數之出席，出席人數較多數之同意行之。
+        </div>
+        <div class="bylaw-article">
+            <strong>第 卅一 條</strong> 理事應出席理事會議，監事應出席監事會議，不得委託他人出席，理事、監事連續二次無故不出席理事、監事會者視同辭職。
+        </div>
+        
+        <div class="page-number">13</div>
+    </div>
+    
+    <!-- ==============================================
+         [Page 14] 組織章程 (5/5)
+         ============================================== -->
+    <div class="a4-page">
+        <div class="bylaw-chapter" style="margin-top: 10mm;">第 五 章 經費及會計</div>
+        <div class="bylaw-article">
+            <strong>第 卅二 條</strong> 本會之經費來源如下：<br>
+            一、入會費壹仟元整(10,00.-)，會費新台幣貳仟元整。(2,000.-)<br>
+            團體會員常年會費每一代表新台幣貳仟元整。<br>
+            二、會員捐款。<br>
+            四、其他收入。
+        </div>
+        <div class="bylaw-article">
+            <strong>第 卅三 條</strong> 本會會計年度以曆年為準，自每年一月一日起至十二月三十一日止。
+        </div>
+        <div class="bylaw-article">
+            <strong>第 卅四 條</strong> 本會每年於會計年度開始前兩個月，由理事會編造年度工作計劃、收支預算表、員工待遇表，提會員大會通過（會員大會因故未能如期召開者，先提理、監事聯席會議通過），於會計年度開始前，報主管機關核備。應於會計年度終了後兩個月，由理事會編造年度工作報告、收支決算、現金出納表、資產負債表、財產目錄、及基金收支表，送監事會審核後，造具審核意見書送還理事會，提會員大會通過，於三月底前報請主管機關核備(大會未能如期召開時，應先報主管機關)。
+        </div>
+        <div class="bylaw-article">
+            <strong>第 卅五 條</strong> 本會於解散後，剩餘財產歸屬所在地之地方自治團體或主管機關指定之機關團體所有。
+        </div>
+        
+        <div class="bylaw-chapter">第 六 章 附 則</div>
+        <div class="bylaw-article">
+            <strong>第 卅六 條</strong> 本章程未規定事項，悉依有關法令規定辦理。
+        </div>
+        <div class="bylaw-article">
+            <strong>第 卅七 條</strong> 本章程經會員（會員代表）大會通過，報請桃園市政府核備後施行，變更時亦同。
+        </div>
+        <div class="bylaw-article">
+            <strong>第 卅八 條</strong> 本章程經本會 100 年 7 月 7 日第一屆第一次會員（會員代表）大會通過報經桃園市政府 8 月 1 日府社發字第 1000304062 號函准予備查。<br>
+            本章程第一次修正於 106 年 08 月 25 日第三屆第一次會員（會員代表）大會通過報經桃園市政府備查。<br>
+            本章程第二次修正於 109 年 12 月 05 日第四屆第一次會員（會員代表）大會通過報經桃園市政府備查。<br>
+            本章程第三次修正於 112 年 12 月 27 日第五屆第一次會員（會員代表）大會通過報經桃園市政府備查。<br>
+            本章程第四次修正於 114 年 03 月 29 日第五屆第二次會員（會員代表）大會通過報經桃園市政府備查後生效。
+        </div>
+        
+        <div class="page-number">14</div>
+    </div>
+
+    <!-- ==============================================
+         [Page 15] 活動剪影 1 (市長拜訪)
+         ============================================== -->
+    <div class="a4-page">
+        <div class="page-header">
+            <div class="page-title"><i class="fa-solid fa-camera-retro"></i> 會務與活動剪影</div>
+            <div class="page-subtitle">ACTIVITY GALLERY</div>
+        </div>
+
+        <h3 style="font-size: 16pt; margin-bottom: 3mm; color: var(--accent-navy); border-left: 4px solid var(--accent-yellow); padding-left: 10px;">桃園市政府拜會 - 張善政市長</h3>
+        
+        <div class="photo-grid" style="gap: 4mm; margin-top: 0;">
+            <div class="photo-card">
+                <img src="https://tada6th.netlify.app/images/visit/01-01.jpg" alt="活動照片" style="height: 40mm;" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'533\'><rect width=\'800\' height=\'533\' fill=\'%23e2e8f0\'/><text x=\'400\' y=\'266\' font-family=\'sans-serif\' font-size=\'24\' text-anchor=\'middle\' fill=\'%2364748b\'>活動照片</text></svg>'">
+                <div class="photo-caption" style="padding: 6px; font-size: 9pt;">本會理事長致贈紀念旗與張善政市長</div>
+            </div>
+            <div class="photo-card">
+                <img src="https://tada6th.netlify.app/images/visit/01-02.jpg" alt="活動照片" style="height: 40mm;" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'533\'><rect width=\'800\' height=\'533\' fill=\'%23e2e8f0\'/><text x=\'400\' y=\'266\' font-family=\'sans-serif\' font-size=\'24\' text-anchor=\'middle\' fill=\'%2364748b\'>活動照片</text></svg>'">
+                <div class="photo-caption" style="padding: 6px; font-size: 9pt;">廖本生理事長於市府拜會發表建言</div>
+            </div>
+            <div class="photo-card">
+                <img src="https://tada6th.netlify.app/images/visit/01-03.jpg" alt="活動照片" style="height: 40mm;" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'533\'><rect width=\'800\' height=\'533\' fill=\'%23e2e8f0\'/><text x=\'400\' y=\'266\' font-family=\'sans-serif\' font-size=\'24\' text-anchor=\'middle\' fill=\'%2364748b\'>活動照片</text></svg>'">
+                <div class="photo-caption" style="padding: 6px; font-size: 9pt;">桃園市政府拜會座談</div>
+            </div>
+            <div class="photo-card">
+                <img src="https://tada6th.netlify.app/images/visit/01-04.jpg" alt="活動照片" style="height: 40mm;" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'533\'><rect width=\'800\' height=\'533\' fill=\'%23e2e8f0\'/><text x=\'400\' y=\'266\' font-family=\'sans-serif\' font-size=\'24\' text-anchor=\'middle\' fill=\'%2364748b\'>活動照片</text></svg>'">
+                <div class="photo-caption" style="padding: 6px; font-size: 9pt;">航空城發展願景交流</div>
+            </div>
+            <div class="photo-card">
+                <img src="https://tada6th.netlify.app/images/visit/01-05.jpg" alt="活動照片" style="height: 40mm;" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'533\'><rect width=\'800\' height=\'533\' fill=\'%23e2e8f0\'/><text x=\'400\' y=\'266\' font-family=\'sans-serif\' font-size=\'24\' text-anchor=\'middle\' fill=\'%2364748b\'>活動照片</text></svg>'">
+                <div class="photo-caption" style="padding: 6px; font-size: 9pt;">張市長與秘書長周君蔚 產業意見交流</div>
+            </div>
+            <div class="photo-card">
+                <img src="https://tada6th.netlify.app/images/visit/01-06.jpg" alt="活動照片" style="height: 40mm;" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'533\'><rect width=\'800\' height=\'533\' fill=\'%23e2e8f0\'/><text x=\'400\' y=\'266\' font-family=\'sans-serif\' font-size=\'24\' text-anchor=\'middle\' fill=\'%2364748b\'>活動照片</text></svg>'">
+                <div class="photo-caption" style="padding: 6px; font-size: 9pt;">張市長與秘書長、主委謝清鴻合影</div>
+            </div>
+            <div class="photo-card">
+                <img src="https://tada6th.netlify.app/images/visit/01-07.jpg" alt="活動照片" style="height: 40mm;" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'533\'><rect width=\'800\' height=\'533\' fill=\'%23e2e8f0\'/><text x=\'400\' y=\'266\' font-family=\'sans-serif\' font-size=\'24\' text-anchor=\'middle\' fill=\'%2364748b\'>活動照片</text></svg>'">
+                <div class="photo-caption" style="padding: 6px; font-size: 9pt;">張市長與常務監事劉立宏合影</div>
+            </div>
+            <div class="photo-card">
+                <img src="https://tada6th.netlify.app/images/visit/01-08.jpg" alt="活動照片" style="height: 40mm;" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'533\'><rect width=\'800\' height=\'533\' fill=\'%23e2e8f0\'/><text x=\'400\' y=\'266\' font-family=\'sans-serif\' font-size=\'24\' text-anchor=\'middle\' fill=\'%2364748b\'>活動照片</text></svg>'">
+                <div class="photo-caption" style="padding: 6px; font-size: 9pt;">拜會行程圓滿大合影</div>
+            </div>
+        </div>
+
+        <div class="page-number">15</div>
+    </div>
+
+    <!-- ==============================================
+         [Page 16] 活動剪影 2 (議長拜訪)
+         ============================================== -->
+    <div class="a4-page">
+        <div class="page-header">
+            <div class="page-title"><i class="fa-solid fa-camera-retro"></i> 會務與活動剪影</div>
+            <div class="page-subtitle">ACTIVITY GALLERY</div>
+        </div>
+
+        <h3 style="font-size: 16pt; margin-bottom: 5mm; color: var(--accent-navy); border-left: 4px solid var(--accent-yellow); padding-left: 10px;">桃園市議會拜會 - 邱奕勝議長</h3>
+        
+        <div class="photo-grid" style="margin-bottom: 15mm;">
+            <div class="photo-card">
+                <img src="https://tada6th.netlify.app/images/visit02/03_01.jpg" alt="活動照片" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'533\'><rect width=\'800\' height=\'533\' fill=\'%23e2e8f0\'/><text x=\'400\' y=\'266\' font-family=\'sans-serif\' font-size=\'24\' text-anchor=\'middle\' fill=\'%2364748b\'>活動照片</text></svg>'">
+                <div class="photo-caption">致贈紀念品與議長大合影</div>
+            </div>
+            <div class="photo-card">
+                <img src="https://tada6th.netlify.app/images/visit02/03_02.jpg" alt="活動照片" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'533\'><rect width=\'800\' height=\'533\' fill=\'%23e2e8f0\'/><text x=\'400\' y=\'266\' font-family=\'sans-serif\' font-size=\'24\' text-anchor=\'middle\' fill=\'%2364748b\'>活動照片</text></svg>'">
+                <div class="photo-caption">廖本生理事長與邱奕勝議長會談</div>
+            </div>
+            <div class="photo-card" style="grid-column: span 2;">
+                <img src="https://tada6th.netlify.app/images/visit02/03_03.jpg" alt="活動照片" style="height: 100mm;" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'533\'><rect width=\'800\' height=\'533\' fill=\'%23e2e8f0\'/><text x=\'400\' y=\'266\' font-family=\'sans-serif\' font-size=\'24\' text-anchor=\'middle\' fill=\'%2364748b\'>活動照片</text></svg>'">
+                <div class="photo-caption">意見交流與政策探討</div>
+            </div>
+        </div>
+
+        <div class="page-number">16</div>
+    </div>
+
+    <!-- ==============================================
+         [Page 17] 活動剪影 3 (尾牙餐會 1/2) - 6張
+         ============================================== -->
+    <div class="a4-page">
+        <div class="page-header">
+            <div class="page-title"><i class="fa-solid fa-camera-retro"></i> 會務與活動剪影</div>
+            <div class="page-subtitle">ACTIVITY GALLERY</div>
+        </div>
+
+        <h3 style="font-size: 16pt; margin-bottom: 5mm; color: var(--accent-navy); border-left: 4px solid var(--accent-yellow); padding-left: 10px;">理監事會暨尾牙餐會 (1/2)</h3>
+        
+        <div class="photo-grid">
+            <div class="photo-card">
+                <img src="https://tada6th.netlify.app/images/gallery/02_01.jpg" alt="活動照片" style="height: 45mm;" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'533\'><rect width=\'800\' height=\'533\' fill=\'%23e2e8f0\'/><text x=\'400\' y=\'266\' font-family=\'sans-serif\' font-size=\'24\' text-anchor=\'middle\' fill=\'%2364748b\'>活動照片</text></svg>'">
+                <div class="photo-caption">理事長與貴賓合影</div>
+            </div>
+            <div class="photo-card">
+                <img src="https://tada6th.netlify.app/images/gallery/02_02.jpg" alt="活動照片" style="height: 45mm;" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'533\'><rect width=\'800\' height=\'533\' fill=\'%23e2e8f0\'/><text x=\'400\' y=\'266\' font-family=\'sans-serif\' font-size=\'24\' text-anchor=\'middle\' fill=\'%2364748b\'>活動照片</text></svg>'">
+                <div class="photo-caption">第一郵聯通運 駱董事長致詞</div>
+            </div>
+            <div class="photo-card">
+                <img src="https://tada6th.netlify.app/images/gallery/02_03.jpg" alt="活動照片" style="height: 45mm;" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'533\'><rect width=\'800\' height=\'533\' fill=\'%23e2e8f0\'/><text x=\'400\' y=\'266\' font-family=\'sans-serif\' font-size=\'24\' text-anchor=\'middle\' fill=\'%2364748b\'>活動照片</text></svg>'">
+                <div class="photo-caption">桃園市政府 溫代欣秘書長致詞</div>
+            </div>
+            <div class="photo-card">
+                <img src="https://tada6th.netlify.app/images/gallery/02_04.jpg" alt="活動照片" style="height: 45mm;" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'533\'><rect width=\'800\' height=\'533\' fill=\'%23e2e8f0\'/><text x=\'400\' y=\'266\' font-family=\'sans-serif\' font-size=\'24\' text-anchor=\'middle\' fill=\'%2364748b\'>活動照片</text></svg>'">
+                <div class="photo-caption">總顧問 駱董事長 慨捐壹拾萬元</div>
+            </div>
+            <div class="photo-card">
+                <img src="https://tada6th.netlify.app/images/gallery/02_05.jpg" alt="活動照片" style="height: 45mm;" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'533\'><rect width=\'800\' height=\'533\' fill=\'%23e2e8f0\'/><text x=\'400\' y=\'266\' font-family=\'sans-serif\' font-size=\'24\' text-anchor=\'middle\' fill=\'%2364748b\'>活動照片</text></svg>'">
+                <div class="photo-caption">廖本生理事長致贈感謝錦旗予林萬監事長</div>
+            </div>
+            <div class="photo-card">
+                <img src="https://tada6th.netlify.app/images/gallery/02_06.jpg" alt="活動照片" style="height: 45mm;" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'533\'><rect width=\'800\' height=\'533\' fill=\'%23e2e8f0\'/><text x=\'400\' y=\'266\' font-family=\'sans-serif\' font-size=\'24\' text-anchor=\'middle\' fill=\'%2364748b\'>活動照片</text></svg>'">
+                <div class="photo-caption">桃園市政府地政局 蔡金鐘局長專題演講</div>
+            </div>
+        </div>
+
+        <div class="page-number">17</div>
+    </div>
+
+    <!-- ==============================================
+         [Page 18] 活動剪影 4 (尾牙餐會 2/2) - 4張
+         ============================================== -->
+    <div class="a4-page">
+        <div class="page-header">
+            <div class="page-title"><i class="fa-solid fa-camera-retro"></i> 會務與活動剪影</div>
+            <div class="page-subtitle">ACTIVITY GALLERY</div>
+        </div>
+
+        <h3 style="font-size: 16pt; margin-bottom: 5mm; color: var(--accent-navy); border-left: 4px solid var(--accent-yellow); padding-left: 10px;">理監事會暨尾牙餐會 (2/2)</h3>
+        
+        <div class="photo-grid">
+            <div class="photo-card">
+                <img src="https://tada6th.netlify.app/images/gallery/02_07.jpg" alt="活動照片" style="height: 50mm;" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'533\'><rect width=\'800\' height=\'533\' fill=\'%23e2e8f0\'/><text x=\'400\' y=\'266\' font-family=\'sans-serif\' font-size=\'24\' text-anchor=\'middle\' fill=\'%2364748b\'>活動照片</text></svg>'">
+                <div class="photo-caption">廖本生理事長於餐會中致歡迎詞</div>
+            </div>
+            <div class="photo-card">
+                <img src="https://tada6th.netlify.app/images/gallery/02_08.jpg" alt="活動照片" style="height: 50mm;" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'533\'><rect width=\'800\' height=\'533\' fill=\'%23e2e8f0\'/><text x=\'400\' y=\'266\' font-family=\'sans-serif\' font-size=\'24\' text-anchor=\'middle\' fill=\'%2364748b\'>活動照片</text></svg>'">
+                <div class="photo-caption">廖本生理事長熱情分享航空城未來展望</div>
+            </div>
+            <div class="photo-card">
+                <img src="https://tada6th.netlify.app/images/gallery/02_09.jpg" alt="活動照片" style="height: 50mm;" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'533\'><rect width=\'800\' height=\'533\' fill=\'%23e2e8f0\'/><text x=\'400\' y=\'266\' font-family=\'sans-serif\' font-size=\'24\' text-anchor=\'middle\' fill=\'%2364748b\'>活動照片</text></svg>'">
+                <div class="photo-caption">廖本生理事長與主桌貴賓們熱絡交流</div>
+            </div>
+            <div class="photo-card">
+                <img src="https://tada6th.netlify.app/images/gallery/02_10.jpg" alt="活動照片" style="height: 50mm;" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'533\'><rect width=\'800\' height=\'533\' fill=\'%23e2e8f0\'/><text x=\'400\' y=\'266\' font-family=\'sans-serif\' font-size=\'24\' text-anchor=\'middle\' fill=\'%2364748b\'>活動照片</text></svg>'">
+                <div class="photo-caption">廖本生理事長上台致詞獲熱烈迴響</div>
+            </div>
+        </div>
+
+        <div class="page-number">18</div>
+    </div>
+
+    <!-- ==============================================
+         [Page 19] 封底
+         ============================================== -->
+    <div class="a4-page full-bleed">
+        <div class="cover-bg"></div>
+        <div class="back-overlay"></div>
+        <div class="cover-content">
+            <h2 style="font-size: 32pt; color: var(--accent-navy); letter-spacing: 4px; margin-bottom: 10px;">攜手共創</h2>
+            <h2 style="font-size: 42pt; color: var(--text-main); font-weight: 900; letter-spacing: 4px; margin-bottom: 20px;">桃園航空城新未來</h2>
+            <h2 style="font-size: 60pt; color: var(--accent-blue); font-weight: 900; font-family: 'Poppins', sans-serif; letter-spacing: 2px;">NEXT GEN</h2>
+        </div>
+    </div>
+
 </body>
 </html>
